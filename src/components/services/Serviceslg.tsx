@@ -1,0 +1,61 @@
+import { FC } from "react";
+
+import { serviceJson } from "../services3/servicesjson";
+import ScrollAnimation from 'react-animate-on-scroll'
+const Servicelg:FC = ()=>{
+
+    return (<>
+        <section className="text-gray-600 body-font md:px-10 px:4 mb-5">
+  <div className="container px-5 py-4 mx-auto">
+        <h1 className="text-4xl text-black font-bold text-center py-8"> Our comprehensive data center solutions </h1>
+    <div className="flex flex-wrap -m-4">
+
+
+        {serviceJson.map((serv,i)=> <ServiceCardEx img={i} key={serv.title} subtitle={serv.subtitle} checks={serv.checks}  title={serv.title} text={serv.text} />)}
+
+    </div>
+  </div>
+</section>
+    </>)
+}
+
+
+interface CardProps{
+    img:number,
+    title:string,
+    text:string,
+    subtitle:string,
+    checks:string[]
+}
+
+export const ServiceCardEx:FC<CardProps>  = ({img,title,text,subtitle,checks})=>{
+
+    return (<>
+          <div className="p-4 md:w-1/3">
+          <ScrollAnimation style={{height:"100%"}} animateIn="animate__fadeInUp">
+
+        <div className="h-full border-gray-500 transition-all hover:scale-105 hover:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] border-opacity-60 rounded-lg overflow-hidden shadow-md">
+          {/* <Image  width={200} height={200} className="lg:h-64 md:h-44 w-full object-cover object-center" src={`/assests/Services/${img+1}Service.jpg`} alt={title}/> */}
+          <img  width={200} height={200} className="lg:h-64 md:h-44 w-full object-cover object-center" src={`/assests/Services/${img+1}Service.jpg`} alt={title}/>
+          
+          <div className="p-6">
+            <h2 className="title-font text-lg font-semibold text-gray-900 mb-3">{title}</h2>
+            <h3 className="title-font text-md font-medium font-sans text-red-400 mb-3">{subtitle}</h3>
+            {/* <p className="leading-relaxed mb-3 text-sm mb-8">{text[0]}<span className="lowercase">{text.slice(1)}</span></p> */}
+            <p className="leading-relaxed mb-3 text-sm mb-8"> {text} </p>
+
+
+            <ul className="list-none space-y-2">
+              {checks.map((str,i)=> <li key={i} className="flex items-center font-sans"><span className="text-green-500 mr-2 font-sans"> <img alt="tick" height={4} width={4} className="h-4 w-4" src="/assests/checked.png" /> </span>{str}</li>  )}
+          
+        </ul>
+
+          </div>
+        </div>
+          </ScrollAnimation>
+      </div>
+    </>)
+}
+
+
+export default Servicelg;
