@@ -10,7 +10,6 @@ import Link from "next/link";
 import { FC, useState } from "react"
 import ScrollAnimation from 'react-animate-on-scroll'
 import { scrollBy } from "@/utilities/scrollanim";
-import AboutHero from "@/components/about/AboutHero";
 
 // import type { Metadata } from "next";
 
@@ -35,13 +34,52 @@ const About:FC = () =>{
 
     return(
     <>
+        <div id="video-test">
 
-    <AboutHero/>
+        <Image alt="about" height={500} width={500} className="w-full h-screen object-cover brightness-[60%]" src="/assests/aboutpage.jpeg"  />
+        <section className="content">
+    <div className="container flex flex-col items-center px-4 py-12 mx-auto text-center">
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white-800 xl:text-6xl dark:text-white">
+        Welcome to Authcor Technologies
+        </h2>
+
+        <p className="block max-w-4xl mt-4 text-gray-500 text-xl font-medium text-white/[0.9]">
+        A leading independent provider of cutting-edge network infrastructure solutions and services tailored for data centers.
+        </p>
+
+        <div className="mt-6 ">
+            
+            <button onClick={()=>{setquotedisplay(true)}}  className="inline-flex font-sans font-semibold items-center justify-center w-full px-10 py-2.5 overflow-hidden text-md font-medium text-white transition-colors duration-300 bg-red-500 rounded-lg shadow sm:w-auto sm:mx-2 hover:bg-white hover:text-black  border-0 border-red-500 ">
+                <span className="mx-2">
+                    Contact us
+                </span>
+            </button>
+
+            <Link href="/services"
+                className="inline-flex items-center font-semibold justify-center w-full px-4 py-2.5 mt-4 overflow-hidden text-md text-white hover:border-red transition-colors duration-300 border-2 rounded-lg shadow sm:w-auto sm:mx-2 sm:mt-0 hover:border-red-500 hover:bg-red-500">
+                <span className="mx-2">
+                    Explore services
+                </span>
+            </Link>
+
+
+        </div>
+        <div className="mt-16 cursor-pointer hover:scale-150" onClick={()=>{scrollBy(document.documentElement.clientHeight-30,1000)}}>
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="22" stroke="white" strokeWidth="2"/>
+                <line x1="24" y1="12" x2="24" y2="32" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="18" y1="26" x2="24" y2="32" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="30" y1="26" x2="24" y2="32" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+            </div>
+    </div>
+</section>
+        </div>
         
 
     <CoreValuesSec/>
 
-    <div className="container px-5 py-12 pb-0 md:mx-auto max-w-7xl">
+    <div className="container px-5 py-12 pb-0 md:mx-auto">
         {/* <!-- Mission Section --> */}
         <ScrollAnimation animateIn="animate__fadeInUp">
 
@@ -80,7 +118,7 @@ const About:FC = () =>{
 
 
         
-    <div className="text-black container px-5 py-12  md:mx-auto max-w-7xl text-center">
+    <div className="text-black container px-5 py-12  md:mx-auto text-center">
     <ScrollAnimation animateIn="animate__fadeInUp">
 
             <h2 className="text-4xl font-bold font-sans">Our History and Achievements</h2>
@@ -95,7 +133,7 @@ const About:FC = () =>{
 
 
     {/* Services */}
-    <div className="text-black container px-5 mt-12 grid justify-items-center  md:mx-auto max-w-7xl">
+    <div className="text-black container px-5 mt-12 grid justify-items-center  md:mx-auto">
             <h2 className="text-4xl font-bold font-sans"> Our Comprehensive Services  </h2>
             <p className="text-md m-4"> At Authcor Technologies, we are committed to empowering businesses with robust, scalable, and secure data center solutions that drive performance and success.</p>
             {/* <Link href={"/services"} className="px-4 py-2 grid text-red hover:before:bg-redborder-red-500 relative h-[50px] w-60 overflow-hidden border border-red-500 bg-white px-3 text-red-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-white hover:shadow-red-500 hover:before:left-0 hover:before:w-full">
@@ -116,7 +154,7 @@ const About:FC = () =>{
                 {/* <Link className="border-2 border-red-900 py-2 px-4 rounded-xl w-fit" href={"/services"} >Explore all services</Link> */}
         </div>
 
-        <div className="container px-5 py-12  md:mx-auto  max-w-7xl justify-items-center flex flex-wrap my-4 text-black">
+        <div className="container px-5 py-12  md:mx-auto justify-items-center flex flex-wrap my-4 text-black">
 
 
     {serviceJson.slice(0,3).map((serv,i)=> <ServiceCardEx img={i} key={serv.title} subtitle={serv.subtitle} checks={serv.checks}  title={serv.title} text={serv.text} />)}
@@ -142,7 +180,7 @@ export default About;
 const CoreValuesSec:FC = () =>{
 
     return (<>
-    <section className="container px-5 py-12 pb-0  md:mx-auto max-w-7xl">
+    <section className="container px-5 py-12 pb-0  md:mx-auto">
         <div className="text-black grid text-center">
         <ScrollAnimation animateIn="animate__fadeInUp">
 

@@ -5,7 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 const Servicelg:FC = ()=>{
 
     return (<>
-        <section className="text-gray-600 body-font md:px-10 px:4 mb-5">
+        <section className="text-gray-600 body-font mb-5 max-w-7xl mx-auto">
   <div className="container px-5 py-4 mx-auto">
         <h1 className="text-4xl text-black font-bold text-center py-8"> Our comprehensive data center solutions </h1>
     <div className="flex flex-wrap -m-4">

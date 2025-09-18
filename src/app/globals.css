@@ -17,6 +17,7 @@ body {
   /* color: var(--foreground); */
   background-color: white;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .container-with-dots {

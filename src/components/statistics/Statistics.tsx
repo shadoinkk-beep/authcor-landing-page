@@ -59,7 +59,7 @@ export default Statistics;
 export const StatisticsTable:FC = () =>{
 
   return (<>
-      <div className="container px-5 py-0 md:mx-auto grid grid-cols-1   overflow-hidden text-center sm:grid-cols-2 lg:grid-cols-4">
+      <div className="container px-5 py-0 md:mx-auto max-w-7xl grid grid-cols-1   overflow-hidden text-center sm:grid-cols-2 lg:grid-cols-4">
       
         <div className="flex flex-col  p-8 sm:border-r-2 border-red-700 border-b-2">
         {/* <ScrollAnimation animateIn="animate__bounceInUp"> */}

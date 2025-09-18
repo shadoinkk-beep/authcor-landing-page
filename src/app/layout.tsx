@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/navbar/Navbar";
+// import Navbar from "@/components/navbar/Navbar";
 import Analytics from '@/components/gtmComponent';
 import { Suspense } from 'react'
+import Navbar from "@/components/navbar/NavbarR";
 
 export const metadata: Metadata = {
   applicationName:"AuthCor",

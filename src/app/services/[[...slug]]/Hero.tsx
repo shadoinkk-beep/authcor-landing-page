@@ -3,9 +3,8 @@ import BlurText from "@/components/BlurText";
 import DarkVeil from "@/components/DarkVeil";
 import Footer3 from "@/components/footernew/Footer3";
 import React from "react";
-import { JobsEXp } from "./page1";
 
-export default function MissionSection() {
+export default function ServiceHero() {
   return (
     <>
     <section className="relative flex flex-col items-center justify-center h-screen  text-white text-center px-4">
@@ -23,7 +22,14 @@ export default function MissionSection() {
         Be Part Of The Mission
       </h1> */}
        <BlurText
-  text="Be Part Of The Mission"
+  text="More Than Data Storage. "
+  delay={150}
+  animateBy="words"
+  direction="top"
+  className="text-4xl md:text:5xl  tracking-tight text-white-800 lg:text-7xl text-white flex justify-center"
+/>
+       <BlurText
+  text="It’s Business Continuity."
   delay={150}
   animateBy="words"
   direction="top"
@@ -31,7 +37,7 @@ export default function MissionSection() {
 />
 
       <p className="text-base sm:text-lg max-w-2xl text-white">
-        We're looking for curious people ready to grow with us. At Author, we champion <br /> trust, clarity, and taking full responsibility.
+        Authcor ensures uptime, security, and scalability, so you focus on growth while we safeguard your most critical assets.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -46,8 +52,6 @@ export default function MissionSection() {
     
     </section>
 
-    <JobsEXp/>
-    <Footer3/>
     </>
   );
 }
