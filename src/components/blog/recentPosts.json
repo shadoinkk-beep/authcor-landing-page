@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "author": "Adam",
+    "date": "20 Jan 2022",
+    "title": "Why data centers are important?",
+    "excerpt": "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=60"
+  },
+  {
+    "id": 2,
+    "author": "Adam",
+    "date": "19 Jan 2025",
+    "title": "Migrating to Linear 101",
+    "excerpt": "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get...",
+    "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=60"
+  },
+  {
+    "id": 3,
+    "author": "Lana Steiner",
+    "date": "18 Jan 2022",
+    "title": "Building your API Stack",
+    "excerpt": "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
+    "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=60"
+  }
+]

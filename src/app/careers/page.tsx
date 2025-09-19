@@ -5,6 +5,27 @@ import Footer3 from "@/components/footernew/Footer3";
 import React from "react";
 import { JobsEXp } from "./page1";
 
+
+import { motion } from "framer-motion";
+
+const textVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
 export default function MissionSection() {
   return (
     <>
@@ -30,7 +51,7 @@ export default function MissionSection() {
   className="text-4xl md:text:5xl  tracking-tight text-white-800 lg:text-7xl text-white flex justify-center"
 />
 
-      <p className="text-base sm:text-lg max-w-2xl text-white">
+      {/* <p className="text-base sm:text-lg max-w-2xl text-white">
         We're looking for curious people ready to grow with us. At Author, we champion <br /> trust, clarity, and taking full responsibility.
       </p>
 
@@ -41,7 +62,30 @@ export default function MissionSection() {
         <button className="px-8 py-2 border border-white text-white rounded-lg  hover:bg-white hover:text-black transition">
           Company Insights
         </button>
-      </div>
+      </div> */}
+      <motion.div
+      className="text-center"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
+    >
+      <motion.p
+        className="text-base sm:text-lg max-w-2xl text-white mx-auto mb-8"
+        variants={textVariants}
+      >
+        We're looking for curious people ready to grow with us. At Author, we champion <br /> trust, clarity, and taking full responsibility.
+      </motion.p>
+
+      <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={textVariants}>
+        <button className="px-8 py-2 bg-white border border-white text-black rounded-lg shadow hover:bg-transparent hover:text-white transition">
+          Know More
+        </button>
+        <button className="px-8 py-2 border border-white text-white rounded-lg hover:bg-white hover:text-black transition">
+          Company Insights
+        </button>
+      </motion.div>
+    </motion.div>
 </div>
     
     </section>
