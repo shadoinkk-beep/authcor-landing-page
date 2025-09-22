@@ -11,10 +11,10 @@ const Statistics:FC = () =>{
 
   const [quotedisplay, setquotedisplay] = useState(false)
 
-    return(<><div className="container md:mx-auto grid justify-center">
+    return(<><div className="container max-w-7xl mx-auto grid justify-center">
           
           
-          <div className="container px-5 py-6  md:mx-auto">
+          <div className="container  py-6  ">
           <ScrollAnimation animateIn="animate__fadeInUp">
     <h1 className="text-4xl px-4 font-medium text-gray-700 text-center">
     Why AuthCor Technologies?

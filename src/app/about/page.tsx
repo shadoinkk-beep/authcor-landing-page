@@ -41,11 +41,11 @@ const About:FC = () =>{
 
     <CoreValuesSec/>
 
-    <div className="container px-5 py-12 pb-0 md:mx-auto max-w-7xl">
+    <div className="container py-12 pb-0 mx-auto max-w-7xl">
         {/* <!-- Mission Section --> */}
         <ScrollAnimation animateIn="animate__fadeInUp">
 
-        <div className="flex flex-col-reverse md:flex-row p-8 gap-12" >
+        <div className="flex flex-col-reverse md:flex-row py-8 gap-12" >
             <div className="md:w-2/4">
 
             <h2 className="text-2xl font-bold text-gray-900 mb-4">OUR MISSION</h2>
@@ -95,7 +95,7 @@ const About:FC = () =>{
 
 
     {/* Services */}
-    <div className="text-black container px-5 mt-12 grid justify-items-center  md:mx-auto max-w-7xl">
+    <div className="text-black container  mt-12 grid justify-items-center  mx-auto max-w-7xl">
             <h2 className="text-4xl font-bold font-sans"> Our Comprehensive Services  </h2>
             <p className="text-md m-4"> At Authcor Technologies, we are committed to empowering businesses with robust, scalable, and secure data center solutions that drive performance and success.</p>
             {/* <Link href={"/services"} className="px-4 py-2 grid text-red hover:before:bg-redborder-red-500 relative h-[50px] w-60 overflow-hidden border border-red-500 bg-white px-3 text-red-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-white hover:shadow-red-500 hover:before:left-0 hover:before:w-full">
@@ -107,9 +107,9 @@ const About:FC = () =>{
       </svg>
       </span>
     </Link> */}
-    <Link href={"/services"} className="py-2 mt-4 px-12 flex gap-8 text-black hover:before:bg-redborder-red-500 relative h-fit w-fit overflow-hidden border border-black bg-white px-3 rounded-xl text-red-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-white hover:shadow-red-500 hover:before:left-0 hover:before:w-full">
+    <Link href={"/services"} className="py-2 mt-4  flex gap-8 text-black hover:before:bg-redborder-red-500 relative h-fit w-fit overflow-hidden border border-black bg-white  rounded-xl text-red-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-white hover:shadow-red-500 hover:before:left-0 hover:before:w-full">
         
-        <span className="relative z-10 px-12 grid gap-8 grid-flow-col items-center text-black hover:text-white">
+        <span className="relative z-10 p-2 grid gap-8 grid-flow-col items-center text-black hover:text-white">
           Explore all services
         </span>
       </Link>
@@ -142,7 +142,7 @@ export default About;
 const CoreValuesSec:FC = () =>{
 
     return (<>
-    <section className="container px-5 py-12 pb-0  md:mx-auto max-w-7xl">
+    <section className="container py-12 pb-0  md:mx-auto max-w-7xl">
         <div className="text-black grid text-center">
         <ScrollAnimation animateIn="animate__fadeInUp">
 

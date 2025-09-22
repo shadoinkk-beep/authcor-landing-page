@@ -41,12 +41,12 @@ const Navbar:FC = () => {
     
 
     return <> 
-    <header  className={`mx-auto max-w-7xl border border-black shadow-md z-40 text-black body-font fixed top-4 left-6 right-6  rounded-xl ${pathname.split("/")[0] ==  "/" ? "dark:text-gray-400" : "bg-white" } ${colorChange
+    <header  className={`mx-auto max-w-7xl px-4 border border-black shadow-md z-40 text-black body-font fixed top-4 left-6 right-6  rounded-xl ${pathname.split("/")[0] ==  "/" ? "dark:text-gray-400" : "bg-white" } ${colorChange
     // ? "bg-gradient-to-r from-black to-indigo-900 text-white"
     ? "bg-white"
     : ""}`}>
     {/* <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex md:justify-between md:items-center"> */}
-    <div className="container px-6 py-4 mx-auto md:flex md:justify-between items-center">
+    <div className="container py-4 mx-auto md:flex md:justify-between items-center">
       
       <div className="flex items-center justify-between">
       <Link href={"/"} className="flex title-font font-medium items-center my-2 md:m-0 text-black">
@@ -110,7 +110,7 @@ const Navbar:FC = () => {
                     </div>
       </div>
 
-                    <div className="hidden sm:flex gap-4 " >
+                    <div className="hidden md:flex gap-4 " >
 
       <Link href={"/contact"} className="px-6 py-2 bg-black text-white border border-white  rounded-lg  shadow hover:bg-transparent hover:text-black hover:border-black transition">
       <span className="relative z-10">Get a quote</span>

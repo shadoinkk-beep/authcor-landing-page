@@ -11,6 +11,7 @@ export default function Page(){
 
     return (
         <>
+        
         <RecentPosts/>
         <BlogList/>
         <Footer3/>

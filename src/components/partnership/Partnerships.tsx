@@ -16,9 +16,9 @@ const PS = [
 const Partnerships:FC = () =>{
 
   return <>
-  <div className="">
+  <div className="max-w-7xl mx-auto">
   <ScrollAnimation animateIn="animate__fadeInUp">
-      <div className="container px-5  py-12 relative md:mx-auto">
+      <div className="container   py-12 relative ">
 
           <h1 className="text-4xl font-medium text-gray-700 text-center">
           We Value Your Partnership
@@ -31,8 +31,8 @@ const Partnerships:FC = () =>{
 
 
 </div>
-<div className="container px-5 py-12 md:mx-auto"> 
-<div className="container md:mx-auto">
+<div className="px-5 py-12 mx-auto max-w-7xl"> 
+<div className="">
 <Carousel
   additionalTransfrom={10}
   arrows
