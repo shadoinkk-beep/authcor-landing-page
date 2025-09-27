@@ -55,9 +55,9 @@ const Footer3:FC = () =>{
                 <h2 className="text-4xl font-bold text-white">Get Started Now!</h2>
                 <p className="">It takes less than a minute of your time.</p>
               </div>
-              <button onClick={()=>{setquotedisplay(true)}} className="relative self-center justify-self-center py-3 flex w-full items-center justify-center overflow-hidden font-semibold border-2 border-red-600 rounded-md  text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-red-600 before:duration-500 before:ease-out hover:shadow-orange-600 hover:before:h-56 hover:before:w-full">
+              <Link href={"/contact/quote"} target="_blank"  className="relative self-center justify-self-center py-3 flex w-full items-center justify-center overflow-hidden font-semibold border-2 border-red-600 rounded-md  text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-red-600 before:duration-500 before:ease-out hover:shadow-orange-600 hover:before:h-56 hover:before:w-full">
               <span className="relative">Get a quote</span>
-            </button>
+            </Link>
             </main>
 
           </div>

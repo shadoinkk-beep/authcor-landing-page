@@ -3,6 +3,7 @@ import { ChangeEventHandler, FC, FormEventHandler, useEffect, useState } from "r
 import emailjs from '@emailjs/browser'
 import Select from 'react-select'
 import { SuccessModal } from "./SuccesModal";
+import Link from "next/link";
 
 
 const Connect:FC = ( ) =>{
@@ -110,9 +111,9 @@ const Connect:FC = ( ) =>{
         <section className="bg-white">
         <div className="container flex items-center justify-center px-4 mx-auto">
             <form className="w-full md:min-w-[400px] md:w-[35vw] max-w-[600px]" onSubmit={handleSubmit}>
-                <div className="flex justify-center mx-auto font-bold text-black">
+                <Link href={"/contact/quote"} className="flex justify-center mx-auto font-bold text-black">
                    GET A QUOTE
-                </div>
+                </Link>
     
     
                 <div className="relative flex items-center mt-8">
