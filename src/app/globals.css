@@ -136,7 +136,9 @@ img{
 
 }
 
-
+.react-tel-input .country-list .country{
+  color:black
+}
 
 @layer base {
   :root {

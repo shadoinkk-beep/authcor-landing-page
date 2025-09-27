@@ -32,7 +32,7 @@ const CompaniesMarq:FC = ()=>{
 
     
     {comps_logs[0].map((logo)=>    <div key={logo} className="p-4 w-24 md:w-44 md:min-w-[200px]">
-    <img src={`assests/DataCenters/${logo}`} />
+    <img src={`assests/DataCenters/${logo}`} alt={logo} />
   </div>)
     }
 
@@ -42,7 +42,7 @@ const CompaniesMarq:FC = ()=>{
 
     
     {comps_logs[1].map((logo)=>    <div key={logo} className="p-4 w-24 md:w-44 md:min-w-[200px]">
-    <img src={`assests/DataCenters/${logo}`} />
+    <img src={`assests/DataCenters/${logo}`} alt={logo} />
   </div>)
     }
 

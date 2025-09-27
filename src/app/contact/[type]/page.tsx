@@ -7,6 +7,8 @@ import React, { useEffect, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useParams, usePathname, useRouter } from "next/navigation";
+import { ArrowBigRight } from "lucide-react";
+import LongTailRightArrow from "@/components/LongTailRightArrow";
 
 const tabs = ["Get a Quote", "Partnership", "General Enquiry", "Careers"];
 
@@ -116,57 +118,70 @@ export default function ContactSection() {
               ))}
             </div>
 
-            <form className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex flex-col">
-                  <label className="text-sm mb-1 text-white/80">
-                    First Name*
-                  </label>
-                  <input className="w-full bg-transparent border-b border-white/30 p-2 focus:outline-none focus:border-white" />
-                </div>
-                <div className="flex flex-col">
-                  <label className="text-sm mb-1 text-white/80">Last Name</label>
-                  <input className="w-full bg-transparent border-b border-white/30 p-2 focus:outline-none focus:border-white" />
-                </div>
-              </div>
+<form className="space-y-4">
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div className="flex flex-col">
+      <label className="text-sm mb-1 text-white/80">First Name*</label>
+      <input className="w-full bg-transparent border-b border-white/30 p-2 focus:outline-none focus:border-white" />
+    </div>
+    <div className="flex flex-col">
+      <label className="text-sm mb-1 text-white/80">Last Name</label>
+      <input className="w-full bg-transparent border-b border-white/30 p-2 focus:outline-none focus:border-white" />
+    </div>
+  </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex flex-col">
-                  <label className="text-sm mb-1 text-white/80">Email*</label>
-                  <input type="email" className="w-full bg-transparent border-b border-white/30 p-2 focus:outline-none focus:border-white" />
-                </div>
-                <div className="flex flex-col">
-                  <label className="text-sm mb-1 text-white/80">
-                    Phone Number*
-                  </label>
-                  {isClient && (
-                    <PhoneInput
-                      country="in"
-                      value={phone}
-                      onChange={(value) => setPhone(value || "")}
-                      inputClass="!bg-transparent !text-white !border-0 !w-full"
-                      buttonClass="!bg-transparent !border-0"
-                      containerClass="!bg-transparent !border-b !border-white/30 p-1"
-                    />
-                  )}
-                </div>
-              </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div className="flex flex-col">
+      <label className="text-sm mb-1 text-white/80">Email*</label>
+      <input
+        type="email"
+        className="w-full bg-transparent border-b border-white/30 p-2 focus:outline-none focus:border-white"
+      />
+    </div>
+    <div className="flex flex-col">
+      <label className="text-sm mb-1 text-white/80">Phone Number*</label>
+      {isClient && (
+        <PhoneInput
+          country="in"
+          value={phone}
+          onChange={(value) => setPhone(value || "")}
+          inputClass="!bg-transparent !text-white !border-0 !w-full"
+          buttonClass="!bg-transparent !border-0"
+          containerClass="!bg-transparent !border-b !border-white/30 p-1"
+        />
+      )}
+    </div>
+  </div>
 
-              <div>
-                <label className="text-sm text-white/80">Tell Us More</label>
-                <textarea
-                  placeholder="Tell Us More"
-                  maxLength={1000}
-                  rows={8}
-                  className="w-full mt-2 bg-transparent border border-white/30 p-3 focus:outline-none focus:border-white resize-none"
-                ></textarea>
-                <div className="text-right text-xs text-white/60 mt-1">0/1000</div>
-              </div>
+  {/* ✅ Show Resume Link only in Careers tab */}
+  {activeTab === "Careers" && (
+    <div className="flex flex-col">
+      <label className="text-sm mb-1 text-white/80">Resume Drive Link*</label>
+      <input
+        type="url"
+        placeholder="https://drive.google.com/..."
+        className="w-full bg-transparent border-b border-white/30 p-2 focus:outline-none focus:border-white"
+      />
+    </div>
+  )}
 
-              <button className="py-2 mt-4 flex gap-8 relative h-fit w-fit overflow-hidden border border-white bg-white hover:bg-transparent text-black hover:text-white px-3 rounded-xl shadow-2xl transition-all">
-                Send Enquiry
-              </button>
-            </form>
+  <div>
+    <label className="text-sm text-white/80">Tell Us More</label>
+    <textarea
+      placeholder="Tell Us More"
+      maxLength={1000}
+      rows={8}
+      className="w-full mt-2 bg-transparent border border-white/30 p-3 focus:outline-none focus:border-white resize-none"
+    ></textarea>
+    <div className="text-right text-xs text-white/60 mt-1">0/1000</div>
+  </div>
+
+  <button className="py-1 mt-4 flex gap-2 items-center relative h-fit w-fit overflow-hidden border border-white bg-white hover:bg-transparent text-black hover:text-white px-3 rounded-xl shadow-2xl transition-all">
+    Send Enquiry <LongTailRightArrow  width={80} />
+  </button>
+</form>
+
+
           </div>
         </div>
       </section>

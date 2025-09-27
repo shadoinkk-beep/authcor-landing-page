@@ -23,7 +23,7 @@ const Services:FC = () =>{
         
       <span className="relative z-1 grid gap-8 grid-flow-col items-center text-black hover:text-white">
         Explore all services
-        <img className="h-4" src="assests/Arrow 12.png" />
+        <img className="h-4" src="assests/Arrow 12.png" alt="arrow" />
 
       </span>
     </Link>
