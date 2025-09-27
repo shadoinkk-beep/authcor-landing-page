@@ -110,8 +110,8 @@ const handleView = async () => {
 
         {/* Views */}
         <div className="flex gap-2 items-center ml-auto text-gray-500">
-          <Eye />
-          <span>{views}</span>
+          {/* <Eye />
+          <span>{views}</span> */}
         </div>
       </div>
       <BlogList/>

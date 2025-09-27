@@ -2,13 +2,13 @@ import { FC } from "react";
 
 const Industries:FC = () =>{
 
-    return(<><div className="p-6">
+    return(<><div className="p-6 max-w-7xl">
 
-    <h2 className="text-4xl font-medium text-gray-700 text-center mt-6">
+    <h2 className="text-4xl font-medium text-gray-700 text-center mt-6 ">
     Industries We Work For
     </h2>
     </div>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6 max-w-7xl">
   {/* <!-- Button 1 --> */}
   <div className="flex justify-between items-center rounded-2xl bg-gray-100 p-6 shadow-[5px_5px_0px_0px_rgba(131,24,67)]">
     <div>

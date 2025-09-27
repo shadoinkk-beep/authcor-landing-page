@@ -19,7 +19,7 @@ const Footer3:FC = () =>{
     
     return (<>
     <section className="w-full bg-stone-900">
-        <section className="w-full bg-stone-900 container text-white px-8 py-10 md:mx-auto gap-y-4 grid justify-normal lg:grid-flow-col" >
+        <section className="w-full bg-stone-900 container text-white  py-10 md:mx-auto gap-y-4 grid justify-normal lg:grid-flow-col mx-auto  max-w-7xl px-4 sm:px-0" >
           <div className="grid">
           <header className="flex justify-between items-start">
               <div>
@@ -43,7 +43,7 @@ const Footer3:FC = () =>{
           </clipPath>
           </defs>
       </svg>
-            <span className="text-white">Expert Care For Your Data center</span>
+            <span className="text-white">Your Global Data Center Operations, Solved.</span>
               </div>
 
 
@@ -65,22 +65,22 @@ const Footer3:FC = () =>{
           <div className="text-sm w-[45%] lg:w-full">
             <h2 className="text-xl font-bold mb-4">Company</h2>
             <ul className="grid gap-4">
-                <a href={"/about"} target="_blank" className="block" > About </a>
-                <a href={"/services"} target="_blank" className="block" >  Services</a>
-                <a href={"/careers"} target="_blank" className="block" >  Careers</a>
-                <li  onClick={()=>{setcontactdisplay(true)}}  className="block" >  Contact</li>
-                <li  onClick={()=>{setcontactdisplay(true)}} className="block" >  Become a Partner </li>
+                <a href={"/about"} target="_blank" className="block" > About Us</a>
+                <a href={"/insights"} target="_blank" className="block" >  Insights & Resources</a>
+                {/* <a href={"/services"} target="_blank" className="block" >  Services</a> */}
+                {/* <a href={"/careers"} target="_blank" className="block" >  Careers</a> */}
+                <a href={"/contact/quote"} target="_blank" className="block" >  Contact</a>
+                <a href={"/contact/partnership"} target="_blank" className="block" >  Global Coverage</a>
                 </ul>
         </div>
           <div className="text-sm w-[45%] lg:w-full">
             <h2 className="text-xl  font-bold mb-4">Services</h2>
             <ul className="md:flex gap-8" >
                 <ul className="grid gap-4">
-                <a href={"/services/s3"} target="_blank" className="block" >  Remote Hands & Eye Support</a>
-                <a href={"/services/s3"} target="_blank" className="block" >  Warehouse & Logistics Support</a>
-                <a href={"/services/s3"} target="_blank" className="block" >  Ticketing System & RMA's</a>
-                <a href={"/services/s6"} target="_blank" className="block" >  Deployment & Maintenance</a>
-                <a href={"/services/s6"} target="_blank" className="block" >  Managed Service Operations</a>
+                <a href={"/services/s3"} target="_blank" className="block" >  Smart Hands & Remote Hands</a>
+                <a href={"/services/s3"} target="_blank" className="block" >  Data Center Deployments</a>
+                <a href={"/services/s3"} target="_blank" className="block" >  Structured Cabling</a>
+                <a href={"/services/s6"} target="_blank" className="block" >  Managed IT Services</a>
                 </ul>
             </ul>
         </div>
@@ -100,7 +100,9 @@ const Footer3:FC = () =>{
 
             <p>Phone : +65 9396 6854</p>
             <p>Email : info@authcor.com</p>
-            <p>Whatsapp : +65 9396 6854</p>
+            <p>Address : W21 Woodlands Close,</p>
+            <p>#08-44, Primz Bizhub,</p>
+            <p>Singapore 737854</p>
             <div className="flex space-x-4 text-white mt-1">
             <a href={social_links.linkdin} target="_blank" >
             <svg className="w-5 h-5"
@@ -190,18 +192,11 @@ const Footer3:FC = () =>{
         </div>
 
     </section>
-    <footer className="text-center py-4 flex border-t border-gray-700 mx-4 text-white">
+    <footer className="text-center w-full py-4 flex border-t border-gray-700  text-white mx-auto  max-w-7xl px-4 sm:px-0 justify-self-center">
         <p>© {new Date().getFullYear()} AuthCor Technologies. All Rights Reserved.</p>
     </footer>
     </section>
-    <Modal open={quotedisplay} onClose={()=>{setquotedisplay(false)}} >
-
-<Connect  />
-</Modal>
-    <Modal open={contactdisplay} onClose={()=>{setcontactdisplay(false)}} >
-
-<ContactUs/>
-</Modal>
+    
     </>
     )
 }

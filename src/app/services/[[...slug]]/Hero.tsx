@@ -3,6 +3,28 @@ import BlurText from "@/components/BlurText";
 import DarkVeil from "@/components/DarkVeil";
 import Footer3 from "@/components/footernew/Footer3";
 import React from "react";
+import { scrollBy } from "@/utilities/scrollanim";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+const textVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
 
 export default function ServiceHero() {
   return (
@@ -18,36 +40,52 @@ export default function ServiceHero() {
         <span className="text-sm  tracking-wide">Infrastructure Built Around You</span>
       </div>
 
-      {/* <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-wide">
-        Be Part Of The Mission
-      </h1> */}
+
+
        <BlurText
-  text="More Than Data Storage. "
+  text="Precision-Engineered Services for "
   delay={150}
   animateBy="words"
   direction="top"
   className="text-4xl md:text:5xl  tracking-tight text-white-800 lg:text-7xl text-white flex justify-center"
 />
        <BlurText
-  text="It’s Business Continuity."
+  text="Mission-Critical Infrastructure."
   delay={150}
   animateBy="words"
   direction="top"
   className="text-4xl md:text:5xl  tracking-tight text-white-800 lg:text-7xl text-white flex justify-center"
 />
 
-      <p className="text-base sm:text-lg max-w-2xl text-white">
-        Authcor ensures uptime, security, and scalability, so you focus on growth while we safeguard your most critical assets.
-      </p>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <button className="px-8 py-2 bg-white border border-white text-black rounded-lg  shadow hover:bg-transparent hover:text-white transition">
+      <motion.div
+      className="text-center"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
+    >
+      <motion.p
+        className="text-base sm:text-lg max-w-2xl text-white mx-auto mb-8"
+        variants={textVariants}
+      >
+       Our capabilities are designed to integrate seamlessly with your team, delivering the exact technical expertise required to scale, optimize, and protect your global assets.
+      </motion.p>
+
+      <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={textVariants}>
+        <button               onClick={() => {
+                scrollBy(document.documentElement.clientHeight - 50, 1000);
+              }} className="px-8 py-2 bg-white border border-white text-black rounded-lg shadow hover:bg-transparent hover:text-white transition">
           Know More
         </button>
-        <button className="px-8 py-2 border border-white text-white rounded-lg  hover:bg-white hover:text-black transition">
-          Company Insights
-        </button>
-      </div>
+<Link
+  href="/insights"
+  className="px-8 py-2 border border-white text-white rounded-lg hover:bg-white hover:text-black transition block text-center"
+>
+  Company Insights
+</Link>
+      </motion.div>
+    </motion.div>
 </div>
     
     </section>

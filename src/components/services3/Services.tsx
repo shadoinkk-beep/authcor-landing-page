@@ -9,17 +9,17 @@ import ScrollAnimation from 'react-animate-on-scroll'
 
 const Services:FC = () =>{
     return(<>
-    <section className="text-gray-600  max-w-7xl mx-auto">
-  <div className="container py-24">
-    <div className="flex flex-wrap -m-4">
+    <section className="text-gray-600 ">
+  <div className="container py-24 mx-auto  max-w-7xl px-2 sm:px-0">
+    <div className="flex flex-wrap">
       <div className="p-4 md:w-1/3">
       <h1 className="text-md font-medium text-red-500">Authcor Technologies</h1>
-    <h2 className="mt-2 text-3xl font-bold text-gray-800">Your Trusted Data Center Services</h2>
+    <h2 className="mt-2 text-3xl font-bold text-gray-800">A Foundation for Flawless IT Operations</h2>
     <p className="mt-4 text-gray-600">
       AuthCor provides expert solutions for every aspect of your data center. From remote hands & eye support to complex deployments, we've got you covered.
     </p>
 
-    <Link href={"/services"} className="py-2 mt-4 flex gap-8 text-black hover:before:bg-redborder-red-500 relative h-fit w-fit overflow-hidden border border-black bg-white px-3 rounded-xl text-red-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-white hover:shadow-red-500 hover:before:left-0 hover:before:w-full">
+    <Link href={"/services"} className="py-2 mt-4 flex gap-8  hover:before:bg-redborder-red-500 relative h-fit w-fit overflow-hidden border border-black bg-white px-3 rounded-xl text-red-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-white hover:shadow-red-500 hover:before:left-0 hover:before:w-full">
         
       <span className="relative z-1 grid gap-8 grid-flow-col items-center text-black hover:text-white">
         Explore all services
@@ -49,7 +49,7 @@ const Card:FC<CardProps>  = ({img,title,text,index})=>{
 
     return (<>
 
-          <div className="p-4 md:w-1/3">
+          <div className="md:w-1/3 sm:p-2">
         <ScrollAnimation style={{height:"100%"}} delay={index*100} animateIn="animate__fadeInUp">
         <div className="h-full border-2 grid rounded-lg  overflow-hidden shadow-md transition-all hover:scale-105 hover:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]">
           {/* <Image height={200} width={200}  className="lg:h-64 md:h-44 w-full object-cover object-center" src={`/assests/Services/${img+1}Service.jpg`} alt="blog"/> */}

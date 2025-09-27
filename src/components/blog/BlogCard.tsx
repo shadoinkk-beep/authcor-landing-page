@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import parse from "html-react-parser";
 import Link from "next/link";
+import { formatFirebaseDate } from "@/utilities/formatdate";
 
 interface BlogCardProps {
   id: string;
@@ -16,9 +17,7 @@ interface BlogCardProps {
 
 const BlogCard: React.FC<BlogCardProps> = ({ id, image, date, title, content, tags }) => {
   // Format Firestore timestamp to DD-MM-YYYY
-  const formattedDate = date?.toDate
-    ? date.toDate().toLocaleDateString("en-GB")
-    : new Date().toLocaleDateString("en-GB");
+const formattedDate = formatFirebaseDate(date)
 
   // Create slug for URL
   const slug = encodeURIComponent(title);

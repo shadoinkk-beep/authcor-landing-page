@@ -41,7 +41,7 @@ const Navbar:FC = () => {
     
 
     return <> 
-    <header  className={`mx-auto max-w-7xl px-4 border border-black shadow-md z-40 text-black body-font fixed top-4 left-6 right-6  rounded-xl ${pathname.split("/")[0] ==  "/" ? "dark:text-gray-400" : "bg-white" } ${colorChange
+    <header  className={`mx-auto max-w-7xl px-4 border border-black shadow-md z-40 text-black body-font fixed top-4 left-2 sm:left-6  right-2 sm:right-6  rounded-xl ${pathname.split("/")[0] ==  "/" ? "dark:text-gray-400" : "bg-white" } ${colorChange
     // ? "bg-gradient-to-r from-black to-indigo-900 text-white"
     ? "bg-white"
     : ""}`}>
@@ -101,10 +101,10 @@ const Navbar:FC = () => {
             </div>
                 <div className="grid sm:hidden gap-4 mt-6 " >
 
-      <Link onClick={()=>{setisMobNavOpen(false)}} href={"/contact"} className=" text-center px-6 py-2 bg-black text-white border border-white  rounded-lg  shadow hover:bg-transparent hover:text-black hover:border-black transition">
+      <Link onClick={()=>{setisMobNavOpen(false)}} href={"/contact/quote"} className=" text-center px-6 py-2 bg-black text-white border border-white  rounded-lg  shadow hover:bg-transparent hover:text-black hover:border-black transition">
       <span className="relative z-10">Get a quote</span>
     </Link>
-      <Link onClick={()=>{setisMobNavOpen(false)}} href={"/contact"}className=" text-center px-6 py-2 border border-black text-black  rounded-lg   hover:text-white hover:bg-black transition">
+      <Link onClick={()=>{setisMobNavOpen(false)}} href={"/contact/general"}className=" text-center px-6 py-2 border border-black text-black  rounded-lg   hover:text-white hover:bg-black transition">
       <span className="relative z-10">Contact Us</span>
     </Link>
                     </div>
@@ -112,10 +112,10 @@ const Navbar:FC = () => {
 
                     <div className="hidden md:flex gap-4 " >
 
-      <Link href={"/contact"} className="px-6 py-2 bg-black text-white border border-white  rounded-lg  shadow hover:bg-transparent hover:text-black hover:border-black transition">
+      <Link href={"/contact/quote"} className="px-6 py-2 bg-black text-white border border-white  rounded-lg  shadow hover:bg-transparent hover:text-black hover:border-black transition">
       <span className="relative z-10">Get a quote</span>
     </Link>
-      <Link href={"/contact"}className="px-6 py-2 border border-black text-black  rounded-lg   hover:text-white hover:bg-black transition">
+      <Link href={"/contact/general"}className="px-6 py-2 border border-black text-black  rounded-lg   hover:text-white hover:bg-black transition">
       <span className="relative z-10">Contact Us</span>
     </Link>
                     </div>

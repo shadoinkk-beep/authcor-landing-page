@@ -17,10 +17,12 @@ const Statistics:FC = () =>{
           <div className="container  py-6  ">
           <ScrollAnimation animateIn="animate__fadeInUp">
     <h1 className="text-4xl px-4 font-medium text-gray-700 text-center">
-    Why AuthCor Technologies?
+    Stop Reacting to Infrastructure Demands.
+    <br />
+     Start Driving Business Strategy.
     </h1>
     <p  className="text-center px-4 mt-6 text-lg font-light text-black">
-    We offer a comprehensive suite of data center solutions, including remote hands support, logistics, deployment, and 24/7 emergency services. They stand out for their expert, adaptable workforce and tailored solutions to meet unique business needs. With a global reach and experience across IT and cloud industries AuthCor ensures seamless network migrations, structured cabling, and reliable managed services. 
+      Managing a distributed infrastructure consumes your most valuable asset: your team’s focus. AuthCor operates as a seamless extension of your organization, embedding certified data center engineers into your workflow. We master the physical layer—from emergency break/fix to full-scale rack and stack deployments—liberating your team to execute the strategic projects that matter.
     </p>
           </ScrollAnimation>
     <div className="flex items-center justify-center m-4" >

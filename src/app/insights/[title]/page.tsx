@@ -1,6 +1,7 @@
 // app/insights/[title]/page.tsx
 import PostClient from "./PostClient";
 import { fetchPostByTitle } from "@/lib/fetchPostByTitle";
+import { Eye, ThumbsUp } from "lucide-react";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 
@@ -8,6 +9,7 @@ interface Props {
   params: { title: string | string[] };
 }
 
+// Metadata generator
 export async function generateMetadata({ params }: Props) {
   const titleParam = Array.isArray(params.title) ? params.title[0] : params.title;
   const decodedTitle = decodeURIComponent(titleParam || "");
@@ -17,53 +19,61 @@ export async function generateMetadata({ params }: Props) {
     return { title: "Post Not Found", description: "The requested blog post does not exist." };
   }
 
+  const excerpt = post.content.replace(/<[^>]+>/g, "").slice(0, 160);
+
   return {
     title: post.heading,
-    description: post.content.replace(/<[^>]+>/g, "").slice(0, 160),
+    description: excerpt,
     openGraph: {
       title: post.heading,
-      description: post.content.replace(/<[^>]+>/g, "").slice(0, 160),
+      description: excerpt,
       images: post.coverImage ? [{ url: post.coverImage }] : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title: post.heading,
-      description: post.content.replace(/<[^>]+>/g, "").slice(0, 160),
+      description: excerpt,
       images: post.coverImage ? [post.coverImage] : undefined,
     },
   };
 }
 
+// Server component for the dynamic post page
 export default async function PostPage({ params }: Props) {
+  // Normalize params.title
   const titleParam = Array.isArray(params.title) ? params.title[0] : params.title;
   const decodedTitle = decodeURIComponent(titleParam || "");
-  const post = await fetchPostByTitle(decodedTitle);
 
-  if (!post) notFound();
+  // Fetch post data
+  const post = await fetchPostByTitle(decodedTitle);
+  if (!post) return notFound();
 
   const postId = post.id;
-  const formattedDate = post.createdAt?.seconds
-    ? new Date(post.createdAt.seconds * 1000).toISOString()
-    : new Date().toISOString();
+const formattedDate = post.createdAt?.seconds
+  ? new Date(post.createdAt.seconds * 1000).toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    })
+  : new Date().toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
 
+  // JSON-LD for SEO
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.heading,
     image: post.coverImage || undefined,
-    author: {
-      "@type": "Person",
-      name: "Admin",
-    },
+    author: { "@type": "Person", name: "Admin" },
     datePublished: formattedDate,
     dateModified: formattedDate,
     publisher: {
       "@type": "Organization",
       name: "YourSiteName",
-      logo: {
-        "@type": "ImageObject",
-        url: "/logo.png",
-      },
+      logo: { "@type": "ImageObject", url: "/logo.png" },
     },
     description: post.content.replace(/<[^>]+>/g, "").slice(0, 160),
   };
@@ -76,8 +86,7 @@ export default async function PostPage({ params }: Props) {
   };
 
   return (
-    <article className="max-w-7xl mx-auto space-y-6 py-36">
-      {/* JSON-LD structured data */}
+    <article className="mx-auto  max-w-7xl px-4 sm:px-0 space-y-6 py-36">
       <Script type="application/ld+json" id="blog-json-ld">
         {JSON.stringify(jsonLd)}
       </Script>
@@ -92,21 +101,25 @@ export default async function PostPage({ params }: Props) {
 
       <h1 className="text-4xl font-bold">{serverRenderedPost.heading}</h1>
 
-      <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+      <div className="flex flex-wrap gap-6 justify-between sm:justify-start text-sm text-gray-500">
+        <div className="flex gap-2">
+
         <span>Admin</span>
-        <span>{serverRenderedPost.formattedDate.slice(0, 10)}</span>
-        <span>{serverRenderedPost.interactions.views} views</span>
-        <span>{serverRenderedPost.interactions.like} likes</span>
-        <span>{serverRenderedPost.interactions.share} shares</span>
+        <span>{serverRenderedPost.formattedDate}</span>
+        </div>
+        <div className="flex gap-2">
+
+        <div className="flex items-center gap-1">{serverRenderedPost.interactions.like} <ThumbsUp className="-mt-1" size={16} />  </div>
+        <div className="flex gap-1 items-center">{serverRenderedPost.interactions.views} <Eye  size={16} />  </div>
+        {/* <span>{serverRenderedPost.interactions.like} likes</span> */}
+        </div>
+        {/* <span>{serverRenderedPost.interactions.share} shares</span> */}
       </div>
 
       {serverRenderedPost.tags && (
         <div className="flex flex-wrap gap-2 mt-2">
           {serverRenderedPost.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-full"
-            >
+            <span key={tag} className="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-full">
               {tag}
             </span>
           ))}
@@ -118,9 +131,7 @@ export default async function PostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: serverRenderedPost.content }}
       />
 
-      
       <PostClient post={{ postId: serverRenderedPost.id, interactions: serverRenderedPost.interactions }} />
-
     </article>
   );
 }

@@ -3,7 +3,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 
 const Industries:FC = () =>{
 
-    return(<><div className="container px-5 py-12 md:mx-auto">
+    return(<><div className="container px-5 py-12 md:mx-auto max-w-7xl">
       <ScrollAnimation animateIn="animate__fadeInUp">
 
     <h1 className="text-4xl font-medium text-gray-700 text-center">
@@ -12,7 +12,7 @@ const Industries:FC = () =>{
       </ScrollAnimation>
     </div>
 
-    <div className="grid container px-5 py-6   md:mx-auto grid-cols-1 md:grid-cols-3 gap-8 p-4 mb-12 px-14">
+    <div className="grid container  py-6   md:mx-auto grid-cols-1 md:grid-cols-3 gap-8 p-4 mb-12  max-w-7xl">
     
       {IND.map((ind)=> <Card {...ind} key={ind.text} /> )}
     
@@ -48,7 +48,7 @@ const IND = [
 
 const Card:FC<cardsProps> = ({icon,text})=>{
   return (<>
-      <div className="flex items-center p-4 transition-all hover:scale-105 hover:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] bg-white rounded-lg border-2 border-stone  border-2 border-stone shadow-md">
+      <div className="flex items-center p-4 transition-all hover:scale-105 hover:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] bg-white rounded-lg border-2 border-stone   border-stone shadow-md">
       <div className="w-16  h-16 rounded-full">
         {/* <!-- Replace with actual SVG icon --> */}
         <img src={`assests/IndWework/${icon}.png`} alt="IT & Telecom" className=""/>

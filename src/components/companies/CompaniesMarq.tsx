@@ -19,11 +19,12 @@ const CompaniesMarq:FC = ()=>{
       </div> */}
       <div className="relative flex items-center w-full container mx-5 md:mx-auto">
     <div className="flex-grow border-2 border-t border-gray-300"></div>
-    <span className="flex-shrink mx-4 text-black uppercase text-sm">Familiar with data centers</span>
+    <span className="flex-shrink mx-4 text-black uppercase text-sm">Trusted Inside the World's Most Critical Data Center Ecosystems
+</span>
     <div className="flex-grow border-t border-2 border-gray-300"></div>
   </div>
         <section className="text-gray-600 body-font">
-  <div className="container py-4 mx-auto grid place-items-center">
+  <div className="container py-4 mx-auto grid place-items-center max-w-7xl">
 
 
       

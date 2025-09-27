@@ -7,6 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import { fetchRecentPosts } from "@/lib/fetchRecentPosts";
 import { Post } from "@/lib/fetchPostByTitle";
 import Link from "next/link";
+import { formatFirebaseDate } from "@/utilities/formatdate";
 
 const containerVariants = {
   hidden: {},
@@ -28,8 +29,7 @@ const RecentPosts: React.FC = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  const formatDate = (ts?: any) =>
-    ts ? new Date(ts.seconds * 1000).toLocaleDateString() : "";
+
 
   if (loading) {
     return (
@@ -81,6 +81,8 @@ const RecentPosts: React.FC = () => {
       </div>
 
 <div className="max-w-7xl mx-auto py-36 px-6 sm:px-0">
+        <h1 className="text-4xl  mb-6">Recent Blogs</h1>
+
   <div className="grid grid-cols-1 lg:grid-cols-3  gap-6" >
     {/* Main post spans 2 columns */}
     <motion.div
@@ -98,7 +100,7 @@ const RecentPosts: React.FC = () => {
         />
         <div className="p-6 flex flex-col justify-end ">
           <p className="text-sm text-[#FF0004] mb-1 flex justify-between">
-            <span>admin • {formatDate(mainPost.createdAt)}</span>
+            <span>admin • {formatFirebaseDate(mainPost.createdAt)}</span>
             <span className="text-white">
               <ArrowUpRight />
             </span>
@@ -138,7 +140,7 @@ const RecentPosts: React.FC = () => {
             </div>
             <div className="w-1/2 px-4 flex flex-col justify-start">
               <p className="text-xs text-[#FF0004] flex justify-between">
-                <span>admin • {formatDate(post.createdAt)}</span>
+                <span>admin • {formatFirebaseDate(post.createdAt)}</span>
                 <span className="text-white">
                   <ArrowUpRight />
                 </span>

@@ -28,11 +28,6 @@ interface Post {
   status?: "active" | "archived";
 }
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.2 } },
-};
-
 const itemVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 150, damping: 20 } },
@@ -51,66 +46,64 @@ const BlogList: React.FC = () => {
     fetchPosts();
   }, []);
 
-const fetchPosts = async (nextPage = 1) => {
-  setLoading(true);
-  try {
-    // Total pages calculation (only active posts)
-    const activePostsQuery = query(
-      collection(db, "posts"),
-      where("status", "==", "active")
-    );
-
-    const allSnapshot = await getDocs(activePostsQuery);
-    const totalCount = allSnapshot.size;
-    setTotalPages(Math.ceil(totalCount / PAGE_SIZE));
-
-    // Pagination query (only active posts)
-    let q;
-    if (nextPage === 1) {
-      q = query(
+  const fetchPosts = async (nextPage = 1) => {
+    setLoading(true);
+    try {
+      // Total pages calculation (only active posts)
+      const activePostsQuery = query(
         collection(db, "posts"),
-        where("status", "==", "active"),
-        orderBy("createdAt", "desc"),
-        limit(PAGE_SIZE)
+        where("status", "==", "active")
       );
-    } else if (lastDoc) {
-      q = query(
-        collection(db, "posts"),
-        where("status", "==", "active"),
-        orderBy("createdAt", "desc"),
-        startAfter(lastDoc),
-        limit(PAGE_SIZE)
-      );
+
+      const allSnapshot = await getDocs(activePostsQuery);
+      const totalCount = allSnapshot.size;
+      setTotalPages(Math.ceil(totalCount / PAGE_SIZE));
+
+      // Pagination query (only active posts)
+      let q;
+      if (nextPage === 1) {
+        q = query(
+          collection(db, "posts"),
+          where("status", "==", "active"),
+          orderBy("createdAt", "desc"),
+          limit(PAGE_SIZE)
+        );
+      } else if (lastDoc) {
+        q = query(
+          collection(db, "posts"),
+          where("status", "==", "active"),
+          orderBy("createdAt", "desc"),
+          startAfter(lastDoc),
+          limit(PAGE_SIZE)
+        );
+      }
+
+      if (!q) return;
+
+      const snapshot = await getDocs(q);
+      const fetchedPosts = snapshot.docs.map((doc) => {
+        const data = doc.data();
+        return {
+          id: doc.id,
+          heading: data.heading,
+          coverImage: data.coverImage,
+          content: data.content,
+          excerpt: data.content.replace(/<[^>]+>/g, "").slice(0, 120) + "...",
+          createdAt: data.createdAt,
+          tags: data.tags || [],
+          status: data.status,
+        };
+      });
+
+      setPosts(fetchedPosts);
+      setLastDoc(snapshot.docs[snapshot.docs.length - 1] || null);
+      setPage(nextPage);
+    } catch (err) {
+      console.error("Error fetching posts:", err);
+    } finally {
+      setLoading(false);
     }
-
-    if (!q) return;
-
-    const snapshot = await getDocs(q);
-    console.log(snapshot)
-    const fetchedPosts = snapshot.docs.map((doc) => {
-      const data = doc.data();
-      return {
-        id: doc.id,
-        heading: data.heading,
-        coverImage: data.coverImage,
-        content: data.content,
-        excerpt: data.content.replace(/<[^>]+>/g, "").slice(0, 120) + "...",
-        createdAt: data.createdAt,
-        tags: data.tags || [],
-        status: data.status,
-      };
-    });
-
-    setPosts(fetchedPosts);
-    setLastDoc(snapshot.docs[snapshot.docs.length - 1] || null);
-    setPage(nextPage);
-  } catch (err) {
-    console.error("Error fetching posts:", err);
-  } finally {
-    setLoading(false);
-  }
-};
-
+  };
 
   const handlePrev = () => {
     if (page <= 1) return;
@@ -123,7 +116,7 @@ const fetchPosts = async (nextPage = 1) => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto  py-10 px-6 md:px-0">
+    <div className="mx-auto  max-w-7xl px-2 sm:px-0 py-10">
       <h1 className="text-2xl font-bold mb-8">All blog posts</h1>
 
       {loading ? (
@@ -133,15 +126,15 @@ const fetchPosts = async (nextPage = 1) => {
           ))}
         </div>
       ) : (
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <motion.div key={post.id} variants={itemVariants}>
+            <motion.div
+              key={post.id}
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
+            >
               <BlogCard
                 id={post.id}
                 image={post.coverImage}
@@ -154,7 +147,7 @@ const fetchPosts = async (nextPage = 1) => {
               />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       )}
 
       {/* Pagination */}
