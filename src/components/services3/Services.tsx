@@ -10,7 +10,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 const Services:FC = () =>{
     return(<>
     <section className="text-gray-600 ">
-  <div className="container py-24 mx-auto  max-w-7xl px-2 sm:px-0">
+  <div className="container py-24 mx-auto  max-w-7xl px-2 xl:px-0">
     <div className="flex flex-wrap">
       <div className="p-4 md:w-1/3">
       <h1 className="text-md font-medium text-red-500">Authcor Technologies</h1>

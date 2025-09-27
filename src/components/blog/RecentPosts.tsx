@@ -80,7 +80,7 @@ const RecentPosts: React.FC = () => {
         <DarkVeil hueShift={242} />
       </div>
 
-<div className="max-w-7xl mx-auto py-36 px-6 sm:px-0">
+<div className="py-36 mx-auto  max-w-7xl px-4 md:px-6 xl:px-0">
         <h1 className="text-4xl  mb-6">Recent Blogs</h1>
 
   <div className="grid grid-cols-1 lg:grid-cols-3  gap-6" >

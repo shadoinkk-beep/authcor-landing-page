@@ -9,7 +9,7 @@ const PartnerRegions = ["Australia","Sweden","Poland","France","Germany","Belgiu
 ""
 const Presence3:FC = ()=>{
 
-    return (<div className="container mb-12 py-4 rounded-3xl  mx-auto  max-w-7xl px-2 sm:px-0" >
+    return (<div className="container mb-12 py-4 rounded-3xl  mx-auto  max-w-7xl px-2 xl:px-0" >
       <div className="bg-black container mb-12 py-4 px-8 md:mx-auto rounded-3xl">
     <div>
 <p className="text-center font-semibold text-lg mb-2 text-red-500">AuthCor Regions</p>

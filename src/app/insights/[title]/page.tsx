@@ -72,7 +72,7 @@ const formattedDate = post.createdAt?.seconds
     dateModified: formattedDate,
     publisher: {
       "@type": "Organization",
-      name: "YourSiteName",
+      name: "Authcor.com",
       logo: { "@type": "ImageObject", url: "/logo.png" },
     },
     description: post.content.replace(/<[^>]+>/g, "").slice(0, 160),
@@ -86,7 +86,7 @@ const formattedDate = post.createdAt?.seconds
   };
 
   return (
-    <article className="mx-auto  max-w-7xl px-4 sm:px-0 space-y-6 py-36">
+    <article className="mx-auto max-w-7xl px-4 md:px-6 xl:px-0 space-y-6 py-36">
       <Script type="application/ld+json" id="blog-json-ld">
         {JSON.stringify(jsonLd)}
       </Script>
@@ -111,9 +111,7 @@ const formattedDate = post.createdAt?.seconds
 
         <div className="flex items-center gap-1">{serverRenderedPost.interactions.like} <ThumbsUp className="-mt-1" size={16} />  </div>
         <div className="flex gap-1 items-center">{serverRenderedPost.interactions.views} <Eye  size={16} />  </div>
-        {/* <span>{serverRenderedPost.interactions.like} likes</span> */}
         </div>
-        {/* <span>{serverRenderedPost.interactions.share} shares</span> */}
       </div>
 
       {serverRenderedPost.tags && (
@@ -127,7 +125,7 @@ const formattedDate = post.createdAt?.seconds
       )}
 
       <div
-        className="prose max-w-7xl mt-6 [&_p]:my-2 [&_h1]:my-3 [&_h2]:my-2 [&_ul]:my-2"
+        className="prose  leading-relaxed [&_p]:my-2 [&_h1]:my-3 [&_h2]:my-2 [&_ul]:my-2"
         dangerouslySetInnerHTML={{ __html: serverRenderedPost.content }}
       />
 

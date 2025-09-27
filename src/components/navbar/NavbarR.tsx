@@ -41,7 +41,7 @@ const Navbar:FC = () => {
     
 
     return <> 
-    <header  className={`mx-auto max-w-7xl px-4 border border-black shadow-md z-40 text-black body-font fixed top-4 left-2 sm:left-6  right-2 sm:right-6  rounded-xl ${pathname.split("/")[0] ==  "/" ? "dark:text-gray-400" : "bg-white" } ${colorChange
+    <header  className={`mx-auto max-w-7xl px-4 border border-black shadow-md z-40 text-black body-font fixed top-4 left-4 sm:left-6  right-4 sm:right-6  rounded-xl ${pathname.split("/")[0] ==  "/" ? "dark:text-gray-400" : "bg-white" } ${colorChange
     // ? "bg-gradient-to-r from-black to-indigo-900 text-white"
     ? "bg-white"
     : ""}`}>

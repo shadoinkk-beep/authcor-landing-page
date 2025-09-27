@@ -79,7 +79,7 @@ export const JobsEXp:FC = ()=>{
 </div>
 
 {/* <!-- Job Cards Section --> */}
-<div className="mx-auto  max-w-7xl px-2 sm:px-0 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+<div className="mx-auto  max-w-7xl px-4 md:px-6 xl:px-0 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
   
   {/* <!-- Job Card 1 --> */}
   <div className="bg-white shadow-lg rounded-lg p-6 border grid">
