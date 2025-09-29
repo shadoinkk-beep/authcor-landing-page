@@ -38,7 +38,7 @@ export default function HomeClient() {
                 delay={150}
                 animateBy="words"
                 direction="top"
-                className="text-3xl md:text:4xl font-bold tracking-tight text-white-800 xl:text-6xl dark:text-white flex justify-center"
+                className="text-2xl md:text:4xl font-bold tracking-tight text-white-800 xl:text-6xl dark:text-white flex justify-center"
               />
             </h2>
 
@@ -47,7 +47,7 @@ export default function HomeClient() {
               delay={150}
               animateBy="words"
               direction="bottom"
-              className="max-w-4xl mt-4 text-center text-xl text-white flex justify-center"
+              className="max-w-4xl mt-4 text-center text-base sm:text-xl text-white flex justify-center"
             />
 
             <div className="mt-6 ">

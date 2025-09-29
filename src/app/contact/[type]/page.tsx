@@ -52,12 +52,12 @@ export default function ContactSection() {
 
   return (
     <>
-      <section className="relative w-full min-h-screen h-fit bg-gradient-to-br flex justify-center content-center items-center from-red-900 via-red-700 to-black text-white px-4">
+      <section className="relative w-full min-h-screen h-fit bg-gradient-to-br flex justify-center content-center items-center from-red-900 via-red-700 to-black text-white">
         <div className="absolute top-0 left-0 bottom-0 min-h-screen w-screen">
           <DarkVeil hueShift={242} />
         </div>
 
-        <div className="py-36 max-w-7xl w-full px-6 justify-between grid md:grid-cols-2 gap-12 items-start z-10 relative">
+        <div className="py-36 max-w-7xl mx-auto w-full px-6 justify-between grid md:grid-cols-2 gap-12 items-start z-10 relative">
           <div className="grid gap-6">
             <div>
               <BlurText

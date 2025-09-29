@@ -48,7 +48,7 @@ export default function MissionSection() {
   delay={150}
   animateBy="words"
   direction="top"
-  className="text-4xl md:text:5xl  tracking-tight text-white-800 lg:text-7xl text-white flex justify-center"
+  className="text-2xl md:text:5xl  tracking-tight text-white-800 lg:text-7xl text-white flex justify-center"
 />
 
 

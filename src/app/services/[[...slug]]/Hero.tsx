@@ -41,21 +41,23 @@ export default function ServiceHero() {
       </div>
 
 
+    <div className="grid gap-4">
 
        <BlurText
   text="Precision-Engineered Services for "
   delay={150}
   animateBy="words"
   direction="top"
-  className="text-4xl md:text:5xl  tracking-tight text-white-800 lg:text-7xl text-white flex justify-center"
+  className="text-2xl sm:text-4xl md:text:5xl  tracking-tight text-white-800 lg:text-7xl text-white flex justify-center"
 />
        <BlurText
   text="Mission-Critical Infrastructure."
   delay={150}
   animateBy="words"
   direction="top"
-  className="text-4xl md:text:5xl  tracking-tight text-white-800 lg:text-7xl text-white flex justify-center"
+  className="text-2xl md:text:5xl  tracking-tight text-white-800 lg:text-7xl text-white flex justify-center"
 />
+    </div>
 
 
       <motion.div
