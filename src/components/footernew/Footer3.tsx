@@ -19,7 +19,7 @@ const Footer3:FC = () =>{
     
     return (<>
     <section className="w-full bg-stone-900">
-        <section className="w-full bg-stone-900 container text-white  py-10 md:mx-auto gap-y-4 grid justify-normal lg:grid-flow-col mx-auto  max-w-7xl px-4 xl:px-0" >
+        <section className="w-full bg-stone-900 container text-white  py-10 md:mx-auto gap-y-4 grid justify-normal lg:grid-flow-col mx-auto  max-w-7xl px-6" >
           <div className="grid">
           <header className="flex justify-between items-start">
               <div>
@@ -192,7 +192,7 @@ const Footer3:FC = () =>{
         </div>
 
     </section>
-    <footer className="text-center w-full py-4 flex border-t border-gray-700  text-white mx-auto  max-w-7xl px-4 xl:px-0 justify-self-center">
+    <footer className="text-center w-full py-4 flex border-t border-gray-700  text-white mx-auto  max-w-7xl px-6 justify-self-center">
         <p>© {new Date().getFullYear()} AuthCor Technologies. All Rights Reserved.</p>
     </footer>
     </section>

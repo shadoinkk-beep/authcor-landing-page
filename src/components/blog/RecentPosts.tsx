@@ -33,7 +33,7 @@ const RecentPosts: React.FC = () => {
 
   if (loading) {
     return (
-      <section className="text-white py-12 relative">
+      <section className="text-white py-12 relative px-6">
         <div className="absolute top-0 left-0 bottom-0 min-h-screen w-screen -z-10">
           <DarkVeil hueShift={242} />
         </div>
@@ -75,7 +75,7 @@ const RecentPosts: React.FC = () => {
   const [mainPost, ...sidePosts] = posts;
 
   return (
-    <section className="text-white py-12 relative">
+    <section className="text-white py-12 relative px-6">
       <div className="absolute top-0 left-0 bottom-0 min-h-screen w-screen -z-10">
         <DarkVeil hueShift={242} />
       </div>

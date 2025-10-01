@@ -71,7 +71,7 @@ export const JobsEXp:FC = ()=>{
 
     return(<>
 
-    <section className="font-sans py-12 bg-white">
+    <section className="font-sans py-12 bg-white px-6">
 
 {/* <!-- Header Section --> */}
 <div className="text-center py-8">

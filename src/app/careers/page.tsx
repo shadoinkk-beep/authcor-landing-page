@@ -30,7 +30,7 @@ const containerVariants = {
 export default function MissionSection() {
   return (
     <>
-    <section className="relative flex flex-col items-center justify-center h-screen  text-white text-center px-4">
+    <section className="relative flex flex-col items-center justify-center h-screen  text-white text-center px-6">
       <div className="absolute top-0 left-0 h-screen w-screen" >
   <DarkVeil hueShift={242} />
 </div>

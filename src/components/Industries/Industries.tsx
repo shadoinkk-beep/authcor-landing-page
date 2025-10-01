@@ -3,7 +3,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 
 const Industries:FC = () =>{
 
-    return(<><div className="container px-5 py-12 md:mx-auto max-w-7xl">
+    return(<><div className="container px-6 py-12 md:mx-auto max-w-7xl">
       <ScrollAnimation animateIn="animate__fadeInUp">
 
     <h1 className="text-4xl font-medium text-gray-700 text-center">
@@ -12,7 +12,7 @@ const Industries:FC = () =>{
       </ScrollAnimation>
     </div>
 
-    <div className="grid container  py-6   md:mx-auto grid-cols-1 md:grid-cols-3 gap-8 p-4 mb-12  max-w-7xl">
+    <div className="grid container  py-6 px-6   md:mx-auto grid-cols-1 md:grid-cols-3 gap-8 p-4 mb-12  max-w-7xl">
     
       {IND.map((ind)=> <Card {...ind} key={ind.text} /> )}
     

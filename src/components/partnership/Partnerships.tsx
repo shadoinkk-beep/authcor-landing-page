@@ -18,7 +18,7 @@ const Partnerships:FC = () =>{
   return <>
   <div className="max-w-7xl mx-auto">
   <ScrollAnimation animateIn="animate__fadeInUp">
-      <div className="container   py-12 relative ">
+      <div className="container   py-12 relative px-6">
 
           <h1 className="text-4xl font-medium text-gray-700 text-center">
           Global Scale, Uncompromising Standards.

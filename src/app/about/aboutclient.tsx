@@ -50,7 +50,7 @@ const AboutClient: FC = () => {
 
       <CoreValuesSec />
 
-      <div className="container py-12 mx-auto  max-w-7xl px-4 md:px-6 xl:px-0">
+      <div className="container py-12 mx-auto  max-w-7xl px-6">
         {/* Mission Section */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: false }} variants={fadeUp}>
           <div className="flex flex-col-reverse md:flex-row py-8 gap-12">
@@ -87,7 +87,7 @@ const AboutClient: FC = () => {
       <StatisticsTable />
 
       {/* Services Section */}
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: false}} variants={fadeUp} className="text-black container mt-12 grid justify-items-center mx-auto  max-w-7xl px-4 xl:px-0">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: false}} variants={fadeUp} className="text-black container mt-12 grid justify-items-center mx-auto  max-w-7xl px-6">
         <h2 className="text-4xl font-bold font-sans">Our Comprehensive Services</h2>
         <p className="text-md m-4">At Authcor Technologies, we empower businesses with robust, scalable data center solutions.</p>
         <Link href={"/services"} className="py-2 mt-4 flex gap-8 text-black relative h-fit w-fit overflow-hidden border border-black bg-white rounded-xl text-red-500 shadow-2xl transition-all hover:text-black hover:shadow-red-500">
@@ -112,7 +112,7 @@ export default AboutClient;
 
 // Core Values Component
 const CoreValuesSec: FC = () => (
-  <section className="container py-12 pb-0  mx-auto  max-w-7xl px-4 md:px-6 xl:px-0">
+  <section className="container py-12 pb-0  mx-auto  max-w-7xl px-6">
     <div className="text-black grid text-center">
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: false}} variants={fadeUp}>
         <h2 className="text-4xl font-bold font-sans">Our Core Values</h2>
