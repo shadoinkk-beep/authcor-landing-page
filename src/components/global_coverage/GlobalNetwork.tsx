@@ -115,7 +115,7 @@ const GlobalNetwork: React.FC = () => {
                   "Amsterdam, Netherlands (Science Park)",
                 ].map((item, idx) => (
                   <motion.li key={idx} className="flex items-start gap-2" variants={fadeInUp}>
-                    <img src="/assests/tick_circular.png" alt="tick" className="w-4 h-4 mt-[2px]" />
+                    <img src="/assests/tick_circular.png" alt="tick" className="w-6 h-6 mt-[2px]" />
                     <span>{item}</span>
                   </motion.li>
                 ))}
@@ -146,7 +146,7 @@ const GlobalNetwork: React.FC = () => {
                   "Dallas, Texas, USA | Chicago, Illinois, USA",
                 ].map((item, idx) => (
                   <motion.li key={idx} className="flex items-start gap-2" variants={fadeInUp}>
-                    <img src="/assests/tick_circular.png" alt="tick" className="w-4 h-4 mt-[2px]" />
+                    <img src="/assests/tick_circular.png" alt="tick" className="w-6 h-6 mt-[2px]" />
                     <span>{item}</span>
                   </motion.li>
                 ))}
