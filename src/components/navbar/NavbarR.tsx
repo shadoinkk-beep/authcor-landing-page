@@ -41,7 +41,7 @@ const Navbar:FC = () => {
     
 
     return <> 
-    <header  className={`mx-auto max-w-7xl px-4 border border-black shadow-md z-40 text-black body-font fixed top-4 left-4 sm:left-6  right-4 sm:right-6  rounded-xl ${pathname.split("/")[0] ==  "/" ? "dark:text-gray-400" : "bg-white" } ${colorChange
+    <header  className={`mx-auto max-w-7xl px-4 border border-black shadow-md z-50 text-black body-font fixed top-4 left-4 sm:left-6  right-4 sm:right-6  rounded-xl ${pathname.split("/")[0] ==  "/" ? "dark:text-gray-400" : "bg-white" } ${colorChange
     // ? "bg-gradient-to-r from-black to-indigo-900 text-white"
     ? "bg-white"
     : ""}`}>
@@ -91,8 +91,9 @@ const Navbar:FC = () => {
                 {/* <Link className={`mr-5 my-1 hover:text-red-300 ${pathname.split("/")[1] == "" ? "active_nav" : ""}  content-center transition-colors duration-300 transform md:mx-4 md:my-0`} href="/">Home</Link> */}
                 <Link onClick={()=>{setisMobNavOpen(false)}} className={`mr-5 my-1 hover:text-red-300 ${pathname.split("/")[1] == "services" ? "active_nav" : ""} transition-colors duration-300 content-center  transform md:mx-4 md:my-0`} href="/services">Services</Link>
                 <Link onClick={()=>{setisMobNavOpen(false)}} className={`mr-5 my-1 hover:text-red-300 ${pathname.split("/")[1] == "about" ? "active_nav" : ""} transition-colors duration-300 content-center  transform md:mx-4 md:my-0`} href="/about">About</Link>
-                <Link onClick={()=>{setisMobNavOpen(false)}} className={`mr-5 my-1 hover:text-red-300 ${pathname.split("/")[1] == "insights" ? "active_nav" : ""} transition-colors duration-300 content-center  transform md:mx-4 md:my-0`} href="/insights">Insights</Link>
+                <Link onClick={()=>{setisMobNavOpen(false)}} className={`mr-5 my-1 hover:text-red-300 ${pathname.split("/")[1] == "insights" ? "active_nav" : ""} transition-colors duration-300 content-center  transform md:mx-4 md:my-0`} href="/insights">Blogs</Link>
                 <Link onClick={()=>{setisMobNavOpen(false)}} className={`mr-5 my-1 hover:text-red-300 ${pathname.split("/")[1] == "careers" ? "active_nav" : ""} transition-colors duration-300 content-center  transform md:mx-4 md:my-0`} href="/careers">Careers</Link>
+                <Link onClick={()=>{setisMobNavOpen(false)}} className={`mr-5 my-1 hover:text-red-300 ${pathname.split("/")[1] == "global_coverage" ? "active_nav" : ""} transition-colors duration-300 content-center  transform md:mx-4 md:my-0`} href="/global_coverage">Global Coverage</Link>
                 {/* <p onClick={()=>{setcontactUsdisplay(true)}} className="mr-5 my-1 hover:text-red-300 transition-colors duration-300 content-center  transform md:mx-4 md:my-0 pointer">Contact</p> */}
                 {/* <Link className={`mr-5 my-1 hover:text-red-300 ${pathname.split("/")[0] == "/contact" ? "active_nav" : ""} transition-colors duration-300 content-center  transform md:mx-4 md:my-0`} href="contact">Contact</Link> */}
                 {/* <button onClick={()=>{setquotedisplay(true)}}  className="inline-flex items-center lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-red-500 rounded-2xl border-0 py-2 px-8 mx-8 font-medium focus:outline-none hover:bg-indigo-600 rounded ">

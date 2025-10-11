@@ -69,22 +69,22 @@ const fadeUp = {
 
           {/* Right Section */}
           <motion.div className="grid" variants={fadeUp}>
-            <motion.div className="flex-1 text-right" variants={fadeUp}>
-              <motion.h1
+            <motion.h1 className="flex-1 text-right" variants={fadeUp}>
+              <motion.div
                 className="text-3xl md:text-4xl tracking-tight lg:text-5xl flex justify-end"
                 variants={fadeUp}
               >
                 The Partner We Wanted.
-              </motion.h1>
-            </motion.div>
+              </motion.div>
+            </motion.h1>
 
             <motion.div className="flex-1 text-right" variants={fadeUp}>
-              <motion.h1
+              <motion.div
                 className="text-3xl md:text-4xl tracking-tight lg:text-5xl flex justify-end"
                 variants={fadeUp}
               >
                 So, We Built It.
-              </motion.h1>
+              </motion.div>
             </motion.div>
           </motion.div>
         </motion.div>
