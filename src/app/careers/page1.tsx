@@ -81,6 +81,7 @@ export const JobsEXp: FC = () => {
         "Diagnose and resolve complex technical issues to minimize downtime.",
         "Collaborate with engineering teams to optimize system performance.",
       ],
+      button:"Apply for Field Service Engineer →"
     },
     {
       title: "Senior Field Service Engineer",
@@ -95,6 +96,7 @@ export const JobsEXp: FC = () => {
         "Mentor and provide technical guidance to Field Service Engineers.",
         "Manage relationships with vendors for hardware support and procurement.",
       ],
+      button:"Apply for Senior Field Service Engineer →"
     },
     {
       title: "Technical Project Manager, Data Center Operations",
@@ -110,6 +112,7 @@ export const JobsEXp: FC = () => {
         "Lead cross-functional teams of engineers, technicians, and external vendors.",
         "Communicate project status, risks, and milestones to all stakeholders.",
       ],
+      button:"Apply for Technical Project Manager →"
     },
   ];
 
@@ -163,7 +166,7 @@ export const JobsEXp: FC = () => {
               href={"/contact/careers"}
               className="w-full bg-red-600 block text-center font-semibold text-white py-2 px-4 rounded-md self-end h-fit hover:bg-white hover:text-black border-2 border-red-600"
             >
-              Apply here
+              {job.button}
             </Link>
           </div>
         ))}
