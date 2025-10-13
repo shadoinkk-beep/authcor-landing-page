@@ -66,92 +66,109 @@ const CareerPage:FC = ( ) =>{
 export default CareerPage;
 
 
-export const JobsEXp:FC = ()=>{
+export const JobsEXp: FC = () => {
+  const jobs = [
+    {
+      title: "Field Service Engineer",
+      location: "Singapore, On-site",
+      minExperience: "5+ Years",
+      qualifications: "Bachelor’s degree or diploma in a relevant technical field.",
+      description:
+        "As a Field Service Engineer, you will be a technical authority responsible for the hands-on maintenance, installation, and complex troubleshooting of our data center hardware. Your expertise will ensure the stability and peak performance of our core operational infrastructure.",
+      keyResponsibilities: [
+        "Execute preventative maintenance and repairs on critical data center systems.",
+        "Install and configure new hardware and network infrastructure.",
+        "Diagnose and resolve complex technical issues to minimize downtime.",
+        "Collaborate with engineering teams to optimize system performance.",
+      ],
+    },
+    {
+      title: "Senior Field Service Engineer",
+      location: "Singapore, On-site",
+      minExperience: "7+ Years",
+      qualifications: "Bachelor’s degree in Engineering, IT, or a related field.",
+      description:
+        "In this leadership role, you will drive operational excellence across our data center fleet. The Senior Field Service Engineer not only tackles our most complex infrastructure challenges but also mentors other engineers and leads strategic initiatives to enhance system reliability and efficiency.",
+      keyResponsibilities: [
+        "Lead troubleshooting efforts for high-severity incidents.",
+        "Develop and implement best practices for hardware maintenance and lifecycle management.",
+        "Mentor and provide technical guidance to Field Service Engineers.",
+        "Manage relationships with vendors for hardware support and procurement.",
+      ],
+    },
+    {
+      title: "Technical Project Manager, Data Center Operations",
+      location: "Singapore, On-site",
+      minExperience: "8+ Years in technical project management",
+      qualifications:
+        "Bachelor’s degree and proven experience managing technical infrastructure projects. PMP certification is a plus.",
+      description:
+        "As a Technical Project Manager, you will orchestrate large-scale data center projects from concept to completion. You will be responsible for planning, budgeting, and delivering initiatives on time, ensuring our infrastructure evolves to meet future demands. Your leadership will directly impact our operational success and innovation.",
+      keyResponsibilities: [
+        "Define project scope, goals, and deliverables in collaboration with senior management.",
+        "Manage project timelines, resource allocation, and budgets.",
+        "Lead cross-functional teams of engineers, technicians, and external vendors.",
+        "Communicate project status, risks, and milestones to all stakeholders.",
+      ],
+    },
+  ];
 
-
-    return(<>
-
+  return (
     <section className="font-sans py-12 bg-white px-6">
+      <div className="text-center py-8">
+        <h2 className="text-3xl font-bold text-gray-800">
+          Find Your Path at AuthCor Technologies
+        </h2>
+      </div>
 
-{/* <!-- Header Section --> */}
-<div className="text-center py-8">
-  <h2 className="text-3xl font-bold text-gray-800">Find Your Path at AuthCor Technologies</h2>
-</div>
+      <div className="mx-auto max-w-7xl px-4 md:px-6 xl:px-0 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {jobs.map((job, idx) => (
+          <div key={idx} className="bg-white shadow-lg rounded-lg p-6 border grid">
+            <h2 className="text-xl font-bold text-gray-800 mb-1">{job.title}</h2>
+            <p className="text-sm text-red-500 font-semibold mb-2">{job.qualifications}</p>
 
-{/* <!-- Job Cards Section --> */}
-<div className="mx-auto  max-w-7xl px-4 md:px-6 xl:px-0 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-  
-  {/* <!-- Job Card 1 --> */}
-  <div className="bg-white shadow-lg rounded-lg p-6 border grid">
-    <h2 className="text-xl font-bold text-gray-800 mb-2">Associative Field Service Engineer</h2>
-    <p className="text-sm text-red-500 font-semibold mb-2">
-    Diploma in a relevant field or equivalent practical experience.
+            <p className="text-gray-600 text-sm mb-4">{job.description}</p>
 
-    </p>
-    <p className="text-gray-600 text-sm mb-4">
-      As an Associate Field Service Engineer, you’ll ensure optimal data center performance by installing, maintaining, troubleshooting, and repairing hardware and infrastructure systems.
-    </p>
-    <div className="flex items-center text-sm text-gray-500 mb-4">
-      <span className="mr-4">
-      <svg fill="#000000" className="h-4 w-4" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 512 512" ><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M255.991,213.339c35.355,0,64-28.645,64-64s-28.645-64-64-64s-64,28.645-64,64S220.636,213.339,255.991,213.339z M255.991,128.006c11.791,0,21.333,9.542,21.333,21.333s-9.542,21.333-21.333,21.333c-11.791,0-21.333-9.542-21.333-21.333 S244.2,128.006,255.991,128.006z"></path> <path d="M228.229,397.518l8.681,17.362c7.863,15.726,30.305,15.723,38.164-0.004l18.389-36.8 c18.466-36.902,35.939-66.021,75.763-128.619l1.036-1.629c5.852-9.199,8.681-13.651,12.042-18.961 c14.956-23.623,23.02-50.992,23.02-79.527c0-89.032-77.35-158.521-166.786-148.343c-66.548,7.591-121.188,60.835-130.398,127.125 c-5.511,39.683,4.604,78.394,27.526,109.517C166.5,279.435,190.243,321.574,228.229,397.518z M150.402,133.992 c6.528-46.989,45.76-85.218,92.967-90.603c64.055-7.29,119.289,42.33,119.289,105.951c0,20.39-5.735,39.855-16.403,56.706 c-3.34,5.276-6.155,9.708-11.991,18.88l-1.036,1.629c-40.148,63.109-58.184,93.122-77.28,131.152 c-33.196-65.363-56.271-105.169-85.935-145.383C153.636,190.087,146.437,162.538,150.402,133.992z"></path> <path d="M388.88,313.04c-11.464-2.719-22.961,4.371-25.68,15.835c-2.719,11.464,4.371,22.962,15.835,25.68 c57.212,13.567,90.298,35.274,90.298,50.773c0,29.478-94.949,64-213.333,64c-118.398,0-213.333-34.518-213.333-64 c0-15.508,33.053-37.209,90.236-50.773c11.464-2.719,18.553-14.217,15.834-25.681c-2.719-11.464-14.217-18.553-25.681-15.833 C48.205,330.796,0,362.445,0,405.329c0,64.804,115.134,106.667,256,106.667c140.853,0,256-41.865,256-106.667 C512,362.444,463.765,330.798,388.88,313.04z"></path> </g> </g> </g> </g></svg>
-       Singapore, On-site</span>
-      <span>
-      <svg fill="#000000" className="h-4 w-4" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M 33.7169 50.6051 C 45.9141 50.6051 56.0000 40.4968 56.0000 28.2994 C 56.0000 16.1245 45.8920 5.9937 33.6944 5.9937 C 22.4180 5.9937 12.9611 14.6419 11.5909 25.5365 C 12.1749 25.5365 12.7365 25.5814 13.2981 25.6712 C 13.9944 25.7611 14.6908 25.9183 15.3646 26.1205 C 16.4204 16.9332 24.1926 9.8124 33.6944 9.8124 C 43.9598 9.8124 52.1812 18.0563 52.2037 28.2994 C 52.2037 33.0840 50.4294 37.3969 47.5090 40.6765 C 44.1171 37.8461 39.0406 35.9593 33.6944 35.9593 C 31.1785 35.9593 28.3258 36.4984 25.6751 37.4418 C 25.8324 38.2954 25.9222 39.1715 25.9222 40.0475 C 25.9222 42.9902 25.0012 45.7531 23.4513 48.0668 C 26.5287 49.6616 30.0329 50.6051 33.7169 50.6051 Z M 33.6944 32.0956 C 38.0073 32.0956 41.2644 28.3668 41.2644 23.6720 C 41.2644 19.2469 37.9399 15.4057 33.6944 15.4057 C 29.4714 15.4057 26.1244 19.2469 26.1244 23.6720 C 26.1244 28.3668 29.4040 32.0956 33.6944 32.0956 Z M 11.4112 51.4587 C 17.6783 51.4587 22.8224 46.3372 22.8224 40.0475 C 22.8224 33.8028 17.6783 28.6363 11.4112 28.6363 C 5.1665 28.6363 0 33.8028 0 40.0475 C 0 46.3372 5.1665 51.4587 11.4112 51.4587 Z M 10.0634 46.7415 C 9.7040 46.7415 9.2547 46.5842 8.9627 46.2698 L 4.6498 41.5301 C 4.4926 41.3504 4.3803 40.9685 4.3803 40.6540 C 4.3803 39.8903 4.9868 39.2838 5.7505 39.2838 C 6.1998 39.2838 6.5592 39.4860 6.8063 39.7555 L 9.9960 43.2148 L 15.9487 34.9709 C 16.1958 34.6115 16.6001 34.3644 17.0943 34.3644 C 17.8356 34.3644 18.4870 34.9484 18.4870 35.7122 C 18.4870 35.9593 18.3747 36.2513 18.1725 36.5433 L 11.2090 46.2248 C 10.9844 46.5393 10.5351 46.7415 10.0634 46.7415 Z"></path></g></svg>
+            <div className="mb-4">
+              <h3 className="font-semibold text-gray-700 text-sm mb-1">Key Responsibilities:</h3>
+              <ul className="list-disc list-inside text-gray-600 text-sm">
+                {job.keyResponsibilities.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
 
-        1-2 Years Of Experience</span>
-    </div>
-    <Link href={"/contact/careers"} className="w-full bg-red-600 block text-center font-semibold text-white py-2 px-4 rounded-md  self-end h-fit hover:bg-white hover:text-black border-2 border-red-600">Apply here</Link>
-  </div>
+            <div className="flex items-center text-sm text-gray-500 mb-4">
+              <span className="mr-4">
+                <svg fill="#000000" className="h-4 w-4" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 512 512">
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                  <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g><g><g>
+                      <path d="M255.991,213.339c35.355,0,64-28.645,64-64s-28.645-64-64-64s-64,28.645-64,64S220.636,213.339,255.991,213.339z M255.991,128.006c11.791,0,21.333,9.542,21.333,21.333s-9.542,21.333-21.333,21.333c-11.791,0-21.333-9.542-21.333-21.333 S244.2,128.006,255.991,128.006z"></path>
+                      <path d="M228.229,397.518l8.681,17.362c7.863,15.726,30.305,15.723,38.164-0.004l18.389-36.8 c18.466-36.902,35.939-66.021,75.763-128.619l1.036-1.629c5.852-9.199,8.681-13.651,12.042-18.961 c14.956-23.623,23.02-50.992,23.02-79.527c0-89.032-77.35-158.521-166.786-148.343c-66.548,7.591-121.188,60.835-130.398,127.125 c-5.511,39.683,4.604,78.394,27.526,109.517C166.5,279.435,190.243,321.574,228.229,397.518z M150.402,133.992 c6.528-46.989,45.76-85.218,92.967-90.603c64.055-7.29,119.289,42.33,119.289,105.951c0,20.39-5.735,39.855-16.403,56.706 c-3.34,5.276-6.155,9.708-11.991,18.88l-1.036,1.629c-40.148,63.109-58.184,93.122-77.28,131.152 c-33.196-65.363-56.271-105.169-85.935-145.383C153.636,190.087,146.437,162.538,150.402,133.992z"></path>
+                      <path d="M388.88,313.04c-11.464-2.719-22.961,4.371-25.68,15.835c-2.719,11.464,4.371,22.962,15.835,25.68 c57.212,13.567,90.298,35.274,90.298,50.773c0,29.478-94.949,64-213.333,64c-118.398,0-213.333-34.518-213.333-64 c0-15.508,33.053-37.209,90.236-50.773c11.464-2.719,18.553-14.217,15.834-25.681c-2.719-11.464-14.217-18.553-25.681-15.833 C48.205,330.796,0,362.445,0,405.329c0,64.804,115.134,106.667,256,106.667c140.853,0,256-41.865,256-106.667 C512,362.444,463.765,330.798,388.88,313.04z"></path>
+                    </g></g></g>
+                  </g>
+                </svg>
+                {job.location}
+              </span>
+              <span>
+                <svg fill="#000000" className="h-4 w-4" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M 33.7169 50.6051 C 45.9141 50.6051 56.0000 40.4968 56.0000 28.2994 C 56.0000 16.1245 45.8920 5.9937 33.6944 5.9937 C 22.4180 5.9937 12.9611 14.6419 11.5909 25.5365 C 12.1749 25.5365 12.7365 25.5814 13.2981 25.6712 C 13.9944 25.7611 14.6908 25.9183 15.3646 26.1205 C 16.4204 16.9332 24.1926 9.8124 33.6944 9.8124 C 43.9598 9.8124 52.1812 18.0563 52.2037 28.2994 C 52.2037 33.0840 50.4294 37.3969 47.5090 40.6765 C 44.1171 37.8461 39.0406 35.9593 33.6944 35.9593 C 31.1785 35.9593 28.3258 36.4984 25.6751 37.4418 C 25.8324 38.2954 25.9222 39.1715 25.9222 40.0475 C 25.9222 42.9902 25.0012 45.7531 23.4513 48.0668 C 26.5287 49.6616 30.0329 50.6051 33.7169 50.6051 Z M 33.6944 32.0956 C 38.0073 32.0956 41.2644 28.3668 41.2644 23.6720 C 41.2644 19.2469 37.9399 15.4057 33.6944 15.4057 C 29.4714 15.4057 26.1244 19.2469 26.1244 23.6720 C 26.1244 28.3668 29.4040 32.0956 33.6944 32.0956 Z M 11.4112 51.4587 C 17.6783 51.4587 22.8224 46.3372 22.8224 40.0475 C 22.8224 33.8028 17.6783 28.6363 11.4112 28.6363 C 5.1665 28.6363 0 33.8028 0 40.0475 C 0 46.3372 5.1665 51.4587 11.4112 51.4587 Z M 10.0634 46.7415 C 9.7040 46.7415 9.2547 46.5842 8.9627 46.2698 L 4.6498 41.5301 C 4.4926 41.3504 4.3803 40.9685 4.3803 40.6540 C 4.3803 39.8903 4.9868 39.2838 5.7505 39.2838 C 6.1998 39.2838 6.5592 39.4860 6.8063 39.7555 L 9.9960 43.2148 L 15.9487 34.9709 C 16.1958 34.6115 16.6001 34.3644 17.0943 34.3644 C 17.8356 34.3644 18.4870 34.9484 18.4870 35.7122 C 18.4870 35.9593 18.3747 36.2513 18.1725 36.5433 L 11.2090 46.2248 C 10.9844 46.5393 10.5351 46.7415 10.0634 46.7415 Z"></path></g></svg>
+                {job.minExperience}
+              </span>
+            </div>
 
-  {/* <!-- Job Card 2 --> */}
-  <div className="bg-white shadow-lg rounded-lg p-6 border grid">
-    <h2 className="text-xl font-bold text-gray-800 mb-2">Field Service Engineer</h2>
-    <p className="text-sm text-red-500 font-semibold mb-2">
-    Bachelor’s degree or equivalent practical experience.
-    </p>
-    <p className="text-gray-600 text-sm mb-4">
-      As a Field Service Engineer, you will lead the maintenance, installation, troubleshooting, and repair of data center hardware and infrastructure systems, ensuring peak performance and operational reliability.
-    </p>
-    <div className="flex items-center text-sm text-gray-500 mb-4">
-      <span className="mr-4">
-        <svg fill="#000000" className="h-4 w-4" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 512 512" ><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M255.991,213.339c35.355,0,64-28.645,64-64s-28.645-64-64-64s-64,28.645-64,64S220.636,213.339,255.991,213.339z M255.991,128.006c11.791,0,21.333,9.542,21.333,21.333s-9.542,21.333-21.333,21.333c-11.791,0-21.333-9.542-21.333-21.333 S244.2,128.006,255.991,128.006z"></path> <path d="M228.229,397.518l8.681,17.362c7.863,15.726,30.305,15.723,38.164-0.004l18.389-36.8 c18.466-36.902,35.939-66.021,75.763-128.619l1.036-1.629c5.852-9.199,8.681-13.651,12.042-18.961 c14.956-23.623,23.02-50.992,23.02-79.527c0-89.032-77.35-158.521-166.786-148.343c-66.548,7.591-121.188,60.835-130.398,127.125 c-5.511,39.683,4.604,78.394,27.526,109.517C166.5,279.435,190.243,321.574,228.229,397.518z M150.402,133.992 c6.528-46.989,45.76-85.218,92.967-90.603c64.055-7.29,119.289,42.33,119.289,105.951c0,20.39-5.735,39.855-16.403,56.706 c-3.34,5.276-6.155,9.708-11.991,18.88l-1.036,1.629c-40.148,63.109-58.184,93.122-77.28,131.152 c-33.196-65.363-56.271-105.169-85.935-145.383C153.636,190.087,146.437,162.538,150.402,133.992z"></path> <path d="M388.88,313.04c-11.464-2.719-22.961,4.371-25.68,15.835c-2.719,11.464,4.371,22.962,15.835,25.68 c57.212,13.567,90.298,35.274,90.298,50.773c0,29.478-94.949,64-213.333,64c-118.398,0-213.333-34.518-213.333-64 c0-15.508,33.053-37.209,90.236-50.773c11.464-2.719,18.553-14.217,15.834-25.681c-2.719-11.464-14.217-18.553-25.681-15.833 C48.205,330.796,0,362.445,0,405.329c0,64.804,115.134,106.667,256,106.667c140.853,0,256-41.865,256-106.667 C512,362.444,463.765,330.798,388.88,313.04z"></path> </g> </g> </g> </g></svg>
-       Singapore, On-site</span>
-      <span>
-      <svg fill="#000000" className="h-4 w-4" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M 33.7169 50.6051 C 45.9141 50.6051 56.0000 40.4968 56.0000 28.2994 C 56.0000 16.1245 45.8920 5.9937 33.6944 5.9937 C 22.4180 5.9937 12.9611 14.6419 11.5909 25.5365 C 12.1749 25.5365 12.7365 25.5814 13.2981 25.6712 C 13.9944 25.7611 14.6908 25.9183 15.3646 26.1205 C 16.4204 16.9332 24.1926 9.8124 33.6944 9.8124 C 43.9598 9.8124 52.1812 18.0563 52.2037 28.2994 C 52.2037 33.0840 50.4294 37.3969 47.5090 40.6765 C 44.1171 37.8461 39.0406 35.9593 33.6944 35.9593 C 31.1785 35.9593 28.3258 36.4984 25.6751 37.4418 C 25.8324 38.2954 25.9222 39.1715 25.9222 40.0475 C 25.9222 42.9902 25.0012 45.7531 23.4513 48.0668 C 26.5287 49.6616 30.0329 50.6051 33.7169 50.6051 Z M 33.6944 32.0956 C 38.0073 32.0956 41.2644 28.3668 41.2644 23.6720 C 41.2644 19.2469 37.9399 15.4057 33.6944 15.4057 C 29.4714 15.4057 26.1244 19.2469 26.1244 23.6720 C 26.1244 28.3668 29.4040 32.0956 33.6944 32.0956 Z M 11.4112 51.4587 C 17.6783 51.4587 22.8224 46.3372 22.8224 40.0475 C 22.8224 33.8028 17.6783 28.6363 11.4112 28.6363 C 5.1665 28.6363 0 33.8028 0 40.0475 C 0 46.3372 5.1665 51.4587 11.4112 51.4587 Z M 10.0634 46.7415 C 9.7040 46.7415 9.2547 46.5842 8.9627 46.2698 L 4.6498 41.5301 C 4.4926 41.3504 4.3803 40.9685 4.3803 40.6540 C 4.3803 39.8903 4.9868 39.2838 5.7505 39.2838 C 6.1998 39.2838 6.5592 39.4860 6.8063 39.7555 L 9.9960 43.2148 L 15.9487 34.9709 C 16.1958 34.6115 16.6001 34.3644 17.0943 34.3644 C 17.8356 34.3644 18.4870 34.9484 18.4870 35.7122 C 18.4870 35.9593 18.3747 36.2513 18.1725 36.5433 L 11.2090 46.2248 C 10.9844 46.5393 10.5351 46.7415 10.0634 46.7415 Z"></path></g></svg>
-        3+ Years Of Experience</span>
-    </div>
-    <Link href={"/contact/careers"} className="w-full bg-red-600 block text-center font-semibold text-white py-2 px-4 rounded-md self-end h-fit hover:bg-white hover:text-black border-2 border-red-600">Apply here</Link>
+            <Link
+              href={"/contact/careers"}
+              className="w-full bg-red-600 block text-center font-semibold text-white py-2 px-4 rounded-md self-end h-fit hover:bg-white hover:text-black border-2 border-red-600"
+            >
+              Apply here
+            </Link>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
-  </div>
-
-  {/* <!-- Job Card 3 --> */}
-  <div className="bg-white shadow-lg rounded-lg p-6 border grid">
-    <h2 className="text-xl font-bold text-gray-800 mb-2">Technical Project Manager</h2>
-    <p className="text-sm text-red-500 font-semibold mb-2">
-    Bachelor’s degree or equivalent practical experience.
-    </p>
-    <p className="text-gray-600 text-sm mb-4">
-      As a Technical Project Manager, you will lead data center projects from planning to delivery, ensuring timely, on-budget completion while meeting quality standards. Your expertise will drive innovation and operational success.
-    </p>
-    <div>
-
-    <div className="flex items-center text-sm text-gray-500 mb-4">
-      <span className="mr-4">
-      <svg fill="#000000" className="h-4 w-4" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 512 512" ><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M255.991,213.339c35.355,0,64-28.645,64-64s-28.645-64-64-64s-64,28.645-64,64S220.636,213.339,255.991,213.339z M255.991,128.006c11.791,0,21.333,9.542,21.333,21.333s-9.542,21.333-21.333,21.333c-11.791,0-21.333-9.542-21.333-21.333 S244.2,128.006,255.991,128.006z"></path> <path d="M228.229,397.518l8.681,17.362c7.863,15.726,30.305,15.723,38.164-0.004l18.389-36.8 c18.466-36.902,35.939-66.021,75.763-128.619l1.036-1.629c5.852-9.199,8.681-13.651,12.042-18.961 c14.956-23.623,23.02-50.992,23.02-79.527c0-89.032-77.35-158.521-166.786-148.343c-66.548,7.591-121.188,60.835-130.398,127.125 c-5.511,39.683,4.604,78.394,27.526,109.517C166.5,279.435,190.243,321.574,228.229,397.518z M150.402,133.992 c6.528-46.989,45.76-85.218,92.967-90.603c64.055-7.29,119.289,42.33,119.289,105.951c0,20.39-5.735,39.855-16.403,56.706 c-3.34,5.276-6.155,9.708-11.991,18.88l-1.036,1.629c-40.148,63.109-58.184,93.122-77.28,131.152 c-33.196-65.363-56.271-105.169-85.935-145.383C153.636,190.087,146.437,162.538,150.402,133.992z"></path> <path d="M388.88,313.04c-11.464-2.719-22.961,4.371-25.68,15.835c-2.719,11.464,4.371,22.962,15.835,25.68 c57.212,13.567,90.298,35.274,90.298,50.773c0,29.478-94.949,64-213.333,64c-118.398,0-213.333-34.518-213.333-64 c0-15.508,33.053-37.209,90.236-50.773c11.464-2.719,18.553-14.217,15.834-25.681c-2.719-11.464-14.217-18.553-25.681-15.833 C48.205,330.796,0,362.445,0,405.329c0,64.804,115.134,106.667,256,106.667c140.853,0,256-41.865,256-106.667 C512,362.444,463.765,330.798,388.88,313.04z"></path> </g> </g> </g> </g></svg>
-
-         Singapore, On-site</span>
-      <span>
-      <svg fill="#000000" className="h-4 w-4" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M 33.7169 50.6051 C 45.9141 50.6051 56.0000 40.4968 56.0000 28.2994 C 56.0000 16.1245 45.8920 5.9937 33.6944 5.9937 C 22.4180 5.9937 12.9611 14.6419 11.5909 25.5365 C 12.1749 25.5365 12.7365 25.5814 13.2981 25.6712 C 13.9944 25.7611 14.6908 25.9183 15.3646 26.1205 C 16.4204 16.9332 24.1926 9.8124 33.6944 9.8124 C 43.9598 9.8124 52.1812 18.0563 52.2037 28.2994 C 52.2037 33.0840 50.4294 37.3969 47.5090 40.6765 C 44.1171 37.8461 39.0406 35.9593 33.6944 35.9593 C 31.1785 35.9593 28.3258 36.4984 25.6751 37.4418 C 25.8324 38.2954 25.9222 39.1715 25.9222 40.0475 C 25.9222 42.9902 25.0012 45.7531 23.4513 48.0668 C 26.5287 49.6616 30.0329 50.6051 33.7169 50.6051 Z M 33.6944 32.0956 C 38.0073 32.0956 41.2644 28.3668 41.2644 23.6720 C 41.2644 19.2469 37.9399 15.4057 33.6944 15.4057 C 29.4714 15.4057 26.1244 19.2469 26.1244 23.6720 C 26.1244 28.3668 29.4040 32.0956 33.6944 32.0956 Z M 11.4112 51.4587 C 17.6783 51.4587 22.8224 46.3372 22.8224 40.0475 C 22.8224 33.8028 17.6783 28.6363 11.4112 28.6363 C 5.1665 28.6363 0 33.8028 0 40.0475 C 0 46.3372 5.1665 51.4587 11.4112 51.4587 Z M 10.0634 46.7415 C 9.7040 46.7415 9.2547 46.5842 8.9627 46.2698 L 4.6498 41.5301 C 4.4926 41.3504 4.3803 40.9685 4.3803 40.6540 C 4.3803 39.8903 4.9868 39.2838 5.7505 39.2838 C 6.1998 39.2838 6.5592 39.4860 6.8063 39.7555 L 9.9960 43.2148 L 15.9487 34.9709 C 16.1958 34.6115 16.6001 34.3644 17.0943 34.3644 C 17.8356 34.3644 18.4870 34.9484 18.4870 35.7122 C 18.4870 35.9593 18.3747 36.2513 18.1725 36.5433 L 11.2090 46.2248 C 10.9844 46.5393 10.5351 46.7415 10.0634 46.7415 Z"></path></g></svg>
-        5+ Years Of Experience
-        </span>
-    </div>
-    <Link href={"/contact/careers"} className="w-full bg-red-600 font-semibold block text-center text-white py-2 px-4 rounded-md  self-end h-fit hover:bg-white hover:text-black border-2 border-red-600">Apply here</Link>
-    
-    </div>
-  </div>
-
-</div>
-
-</section>
-    </>)
-}

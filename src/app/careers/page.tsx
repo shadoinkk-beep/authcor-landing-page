@@ -44,11 +44,11 @@ export default function MissionSection() {
 
 
        <BlurText
-  text="Be Part Of The Mission"
+  text="Build the Future: Careers at AuthCor Technologies"
   delay={150}
   animateBy="words"
   direction="top"
-  className="text-2xl md:text:5xl  tracking-tight text-white-800 lg:text-7xl text-white flex justify-center"
+  className="text-2xl md:text:4xl  tracking-tight text-white-800 lg:text-6xl text-white flex justify-center"
 />
 
 
@@ -60,10 +60,14 @@ export default function MissionSection() {
       variants={containerVariants}
     >
       <motion.p
-        className="text-base sm:text-lg max-w-2xl text-white mx-auto mb-8"
+        className="text-base sm:text-lg max-w-4xl text-white mx-auto mb-8"
         variants={textVariants}
       >
-        We're looking for curious people ready to grow with us. At Author, we champion <br /> trust, clarity, and taking full responsibility.
+       At AuthCor Technologies, we are on a mission to power the digital world. We build and 
+maintain the critical infrastructure that communities and businesses rely on every day. 
+We are looking for experienced, curious professionals ready to take on significant 
+challenges and grow with us. Our culture is built on a foundation of trust, clarity, and 
+complete ownership. 
       </motion.p>
 
       <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={textVariants}>
@@ -71,15 +75,15 @@ export default function MissionSection() {
                       onClick={() => {
                 scrollBy(document.documentElement.clientHeight - 30, 1000);
               }}
-               className="px-8 py-2 bg-white border border-white text-black rounded-lg shadow hover:bg-transparent hover:text-white transition">
+               className="px-20 py-2 bg-white border border-white text-black rounded-lg shadow hover:bg-transparent hover:text-white transition">
           Know More
         </button>
-<Link
+{/* <Link
   href="/insights"
   className="px-8 py-2 border border-white text-white rounded-lg hover:bg-white hover:text-black transition block text-center"
 >
   Company Insights
-</Link>
+</Link> */}
       </motion.div>
     </motion.div>
 </div>

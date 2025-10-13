@@ -1,12 +1,26 @@
 import { FC } from "react";
 import Marquee from "react-fast-marquee";
-const comps_logs = [
-  ["27_Tata.png","36_Vodafone-Logo.png","7_Equinixlogo.png","26_Airtel-logo.png","32_Zain_logo.png","5_china_mobile.jpeg","11_PDG_logo.png","19_aimsdatacentre_logo.jpeg"],
-  ["35_Etisalat-Logo.png","14_ST_Telemedia_Logo.png","15_Starhublogo.png","18_View_quest_logo.png","17_Telstra-logo.jpg","4_Centersquare_logo.jpeg","31_NTT-Data-Logo.PNG","9_keppel_data_centres.jpg","22_TMGlobal_Logo.png"],
-  ["24_viettelidc_logo.png","21_celcomdigi.webp","13_Singtel_logo.png","8_GlobalSwitch_logo.png","16_Telin.png","3_CapitaLandLogo.png","10_M1_Logo1.png","29_hkt.png","25_mekongnet.jpg",],
-  ["33_DataMount-logo.png","34_stc_logo.jpeg","28_epldt-logo..png","6_DigitalRealty.png","12_racks_logo.webp","20_bridge_datacentres.png","23_DigitalEdge_Logo.png","1_1net.jpeg","2_bdx.jpeg"],
-]
+// const comps_logs = [
+//   ["27_Tata.png","36_Vodafone-Logo.png","7_Equinixlogo.png","26_Airtel-logo.png","32_Zain_logo.png","5_china_mobile.jpeg","11_PDG_logo.png","19_aimsdatacentre_logo.jpeg"],
+//   ["35_Etisalat-Logo.png","14_ST_Telemedia_Logo.png","15_Starhublogo.png","18_View_quest_logo.png","17_Telstra-logo.jpg","4_Centersquare_logo.jpeg","31_NTT-Data-Logo.PNG","9_keppel_data_centres.jpg","22_TMGlobal_Logo.png"],
+//   ["24_viettelidc_logo.png","21_celcomdigi.webp","13_Singtel_logo.png","8_GlobalSwitch_logo.png","16_Telin.png","3_CapitaLandLogo.png","10_M1_Logo1.png","29_hkt.png","25_mekongnet.jpg",],
+//   ["33_DataMount-logo.png","34_stc_logo.jpeg","28_epldt-logo..png","6_DigitalRealty.png","12_racks_logo.webp","20_bridge_datacentres.png","23_DigitalEdge_Logo.png","1_1net.jpeg","2_bdx.jpeg"],
+// ]
 
+const comps_logs = [
+  "7_Equinixlogo.png",
+  "14_ST_Telemedia_Logo.png",
+  "31_NTT-Data-Logo.PNG",
+  "9_keppel_data_centres.jpg",
+  "13_Singtel_logo.png",
+  "Iron Mountain.png",
+  "8_GlobalSwitch_logo.png",
+  "6_DigitalRealty.png",
+  "12_racks_logo.webp",
+  "Singapore Exchange.png",
+  "20_bridge_datacentres.png",
+  "2_bdx.jpeg"
+]
 
 
 const CompaniesMarq:FC = ()=>{
@@ -31,23 +45,23 @@ const CompaniesMarq:FC = ()=>{
     <Marquee key={0} autoFill>
 
     
-    {comps_logs[0].map((logo)=>    <div key={logo} className="p-4 w-24 md:w-44 md:min-w-[200px]">
+    {comps_logs.map((logo)=>    <div key={logo} className="p-4 w-24 md:w-44 md:min-w-[200px]">
     <img src={`assests/DataCenters/${logo}`} alt={logo} />
   </div>)
     }
 
 
     </Marquee >
-    <Marquee key={1} autoFill>
+    {/* <Marquee key={1} autoFill>
 
     
     {comps_logs[1].map((logo)=>    <div key={logo} className="p-4 w-24 md:w-44 md:min-w-[200px]">
     <img src={`assests/DataCenters/${logo}`} alt={logo} />
   </div>)
-    }
+    } */}
 
 
-    </Marquee >
+    {/* </Marquee >
     <Marquee key={2} autoFill>
 
     
@@ -57,8 +71,8 @@ const CompaniesMarq:FC = ()=>{
     }
 
 
-    </Marquee >
-    <Marquee key={3} autoFill>
+    </Marquee > */}
+    {/* <Marquee key={3} autoFill>
 
     
     {comps_logs[3].map((logo)=>    <div key={logo} className="p-4 w-24 md:w-44 md:min-w-[200px]">
@@ -67,7 +81,7 @@ const CompaniesMarq:FC = ()=>{
     }
 
 
-    </Marquee >
+    </Marquee > */}
 
 
   </div>

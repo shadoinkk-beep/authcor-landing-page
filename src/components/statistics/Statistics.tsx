@@ -1,7 +1,5 @@
 "use client"
 import { FC, useRef, useState } from "react";
-import Connect from "../contactmodal/Connect";
-import Modal from "../modal/Modal";
 import ScrollAnimation from 'react-animate-on-scroll'
 import useScrollTriggeredCountUp from "@/utilities/useScrollTriggeredCountUp";
 
@@ -11,7 +9,7 @@ const Statistics:FC = () =>{
 
   const [quotedisplay, setquotedisplay] = useState(false)
 
-    return(<><div className="container max-w-7xl mx-auto grid justify-center">
+    return(<><div className="container max-w-7xl mx-auto grid justify-center pt-16">
           
           
           <div className="container  py-6  ">
@@ -44,10 +42,8 @@ const Statistics:FC = () =>{
     </div>
 
       <StatisticsTable/>
-      <Modal open={quotedisplay} onClose={()=>{setquotedisplay(false)}} >
 
-<Connect  />
-</Modal>
+
 
     </>)
 
@@ -61,64 +57,51 @@ export default Statistics;
 export const StatisticsTable:FC = () =>{
 
   return (<>
-      <div className="container px-5 py-0 md:mx-auto max-w-7xl grid grid-cols-1   overflow-hidden text-center sm:grid-cols-2 lg:grid-cols-4">
+      <div className="container px-5 pb-16 md:mx-auto max-w-7xl grid grid-cols-1   overflow-hidden text-center sm:grid-cols-2 ">
       
         <div className="flex flex-col  p-8 sm:border-r-2 border-red-700 border-b-2">
-        {/* <ScrollAnimation animateIn="animate__bounceInUp"> */}
-          <dd className="order-first text-4xl font-semibold tracking-tight text-red-700"> <CountUp end={3} /> </dd>
-        {/* </ScrollAnimation> */}
+          <dd className="order-first text-4xl font-semibold tracking-tight text-red-700"> <CountUp end={4} /> </dd>
           <dt className="text-sm font-light leading-6 text-gray-600">Years of experience</dt>
         </div>
-        <div className="flex flex-col  p-8 lg:border-r-2 border-red-700 border-b-2">
-        {/* <ScrollAnimation animateIn="animate__bounceInUp"> */}
-          <dd className="order-first text-4xl font-semibold tracking-tight text-red-700"><CountUp end={13} /></dd>
-        {/* </ScrollAnimation> */}
+
+        <div className="flex flex-col  p-8  border-red-700 border-b-2">
+          <dd className="order-first text-4xl font-semibold tracking-tight text-red-700"><CountUp end={50} /></dd>
           <dt className="text-sm font-light leading-6 text-gray-600">Countries Served</dt>
         </div>
-        <div className="flex flex-col  p-8 sm:border-r-2 border-red-700 border-b-2">
-        {/* <ScrollAnimation animateIn="animate__bounceInUp"> */}
+
+        <div className="flex flex-col  p-8 sm:border-r-2 border-red-700 border-b-2 md:border-b-0 lg:border-b-0">
+                    <dd className="order-first text-4xl font-semibold tracking-tight text-red-700"><CountUp end={500}   /></dd>
+          <dt className="text-sm font-light leading-6 text-gray-600">Defective Components Returned</dt>
+
+
+        </div>
+
+        {/* <div className="flex flex-col  p-8 border-red-700 border-b-2">
           <dd className="order-first text-4xl font-semibold tracking-tight text-red-700"> <CountUp end={100} /></dd>
-        {/* </ScrollAnimation> */}
           <dt className="text-sm font-light leading-6 text-gray-600">Clients Sites Supported</dt>
-        </div>
-        <div className="flex flex-col  p-8 border-red-700 border-b-2">
-        {/* <ScrollAnimation animateIn="animate__bounceInUp"> */}
+        </div> */}
 
-          <dd className="order-first text-4xl font-semibold tracking-tight text-red-700"><CountUp end={1000}   /></dd>
-        {/* </ScrollAnimation> */}
-          <dt className="text-sm font-light leading-6 text-gray-600">Tickets Resolved Monthly</dt>
-        </div>
-
-        <div className="flex flex-col  p-8 sm:border-r-2 border-b-2 lg:border-b-0 border-red-700">
-        {/* <ScrollAnimation animateIn="animate__bounceInUp"> */}
+        {/* <div className="flex flex-col  p-8 sm:border-r-2 border-b-2 lg:border-b-0 border-red-700">
 
           <dd className="order-first text-4xl font-semibold tracking-tight text-red-700"><CountUp end={5}   /></dd>
-        {/* </ScrollAnimation> */}
           <dt className="text-sm font-light leading-6 text-gray-600">In-Country Storage Locations</dt>
-        </div>
+        </div> */}
 
-        <div className="flex flex-col  p-8 lg:border-r-2 border-b-2 lg:border-b-0 border-red-700">
-          {/* <ScrollAnimation animateIn="animate__bounceInUp"> */}
+        {/* <div className="flex flex-col  p-8 lg:border-r-2 border-b-2 lg:border-b-0 border-red-700">
           <dd className="order-first text-4xl font-semibold tracking-tight text-red-700"><CountUp end={25}   /></dd>
 
-          {/* </ScrollAnimation> */}
           <dt className="text-sm font-light leading-6 text-gray-600">Unique Service Providers</dt>
-        </div>
+        </div> */}
 
-        <div className="flex flex-col  p-8 sm:border-r-2 border-b-2 sm:border-b-0 border-red-700">
-        {/* <ScrollAnimation animateIn="animate__bounceInUp"> */}
+        {/* <div className="flex flex-col  p-8 sm:border-r-2 border-b-2 sm:border-b-0 border-red-700">
 
           <dd className="order-first text-4xl font-semibold tracking-tight text-red-700"><CountUp end={60}   /></dd>
-        {/* </ScrollAnimation> */}
           <dt className="text-sm font-light leading-6 text-gray-600">Projects Managed Monthly</dt>
-        </div>
+        </div> */}
 
         <div className="flex flex-col  p-8 border-red-700 border-b-2 sm:border-b-0">
-        {/* <ScrollAnimation animateIn="animate__bounceInUp"> */}
-
-          <dd className="order-first text-4xl font-semibold tracking-tight text-red-700"><CountUp end={500}   /></dd>
-        {/* </ScrollAnimation> */}
-          <dt className="text-sm font-light leading-6 text-gray-600">Defective Components Returned</dt>
+          <dd className="order-first text-4xl font-semibold tracking-tight text-red-700"><CountUp end={1000}   /></dd>
+          <dt className="text-sm font-light leading-6 text-gray-600">Tickets Resolved Monthly</dt>
         </div>
 
       </div>

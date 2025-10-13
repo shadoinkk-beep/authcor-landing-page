@@ -3,6 +3,7 @@ import React from "react";
 import ServiceHero from "./Hero";
 import Servicelg from "@/components/services/Serviceslg";
 import Footer3 from "@/components/footernew/Footer3";
+import ServicesCTA from "@/components/services/ServicesCTA";
 
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function Services() {
     <>
     <ServiceHero/>
     <Servicelg/>
+    <ServicesCTA/>
     <Footer3/>
     </>
   );

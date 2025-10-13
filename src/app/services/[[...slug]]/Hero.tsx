@@ -77,15 +77,15 @@ export default function ServiceHero() {
       <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={textVariants}>
         <button               onClick={() => {
                 scrollBy(document.documentElement.clientHeight - 50, 1000);
-              }} className="px-8 py-2 bg-white border border-white text-black rounded-lg shadow hover:bg-transparent hover:text-white transition">
+              }} className="px-20 py-2 bg-white border border-white text-black rounded-lg shadow hover:bg-transparent hover:text-white transition">
           Know More
         </button>
-<Link
+{/* <Link
   href="/insights"
   className="px-8 py-2 border border-white text-white rounded-lg hover:bg-white hover:text-black transition block text-center"
 >
   Company Insights
-</Link>
+</Link> */}
       </motion.div>
     </motion.div>
 </div>

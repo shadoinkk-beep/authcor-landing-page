@@ -15,3 +15,67 @@ export const serviceJson = [
     {img:"",title:"Ad-hoc & Urgent/Scheduled Support",subtitle:"Immediate support when you need it most.",text:"Our ad-hoc & emergency support service offers rapid response and resolution to unexpected IT issues, ensuring minimal disruption to your operations",checks:["24/7 emergency support"," Quick issue resolution","On-demand technical assistance","Peace of mind for critical situations"]},
     // {img:"",title:"",subtitle:"",text:"",checks:["","","",""]},
 ]
+
+
+export const HomePageServices = [
+  {
+    img: "",
+    title: "Smart Hands & On-Site Support",
+    subtitle: "24/7 expert technical support at any data center globally.",
+    text: "Our field technicians act as your eyes, ears, and hands for remote troubleshooting, break/fix, IMAC services, and critical incident resolution, helping you slash Mean Time to Resolution (MTTR).",
+    checks: [
+      "24/7 expert on-site support",
+      "Remote troubleshooting and break/fix",
+      "IMAC services (Install, Move, Add, Change)",
+      "Critical incident resolution to reduce MTTR"
+    ]
+  },
+  {
+    img: "",
+    title: "IT Warehouse & Logistics Support",
+    subtitle: "Optimize your hardware supply chain efficiently.",
+    text: "We manage inventory, pre-deployment staging, and coordinated shipping, ensuring your assets are tracked, secure, and ready for deployment on schedule.",
+    checks: [
+      "Secure IT warehousing",
+      "Pre-deployment staging",
+      "Coordinated shipping",
+      "Asset tracking and security"
+    ]
+  },
+  {
+    img: "",
+    title: "Infrastructure Deployment & Lifecycle",
+    subtitle: "Execute IT projects with precision and zero disruption.",
+    text: "We deliver turnkey services for rack and stack deployments, data center migrations, technology refreshes, and structured cabling installations, ensuring projects are completed on time and on budget.",
+    checks: [
+      "Rack and stack deployments",
+      "Data center migrations",
+      "Technology refreshes",
+      "Structured cabling installations"
+    ]
+  },
+  {
+    img: "",
+    title: "Managed Data Center Services",
+    subtitle: "Proactive 24/7 management of your infrastructure.",
+    text: "We provide continuous monitoring, patch management, and performance optimization to prevent outages, enhance security, and reduce operational overhead.",
+    checks: [
+      "Continuous monitoring",
+      "Patch management",
+      "Performance optimization",
+      "Proactive outage prevention"
+    ]
+  },
+  {
+    img: "",
+    title: "Data Center Strategy & Consulting",
+    subtitle: "Align IT infrastructure with your business goals.",
+    text: "Our senior consultants provide expert analysis and design for data center strategy, capacity planning, operational efficiency, and high-performance cabling to future-proof your investment.",
+    checks: [
+      "Data center strategy planning",
+      "Capacity planning",
+      "Operational efficiency analysis",
+      "High-performance cabling design"
+    ]
+  }
+];

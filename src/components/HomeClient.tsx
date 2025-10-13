@@ -12,6 +12,8 @@ import Presence3 from "@/components/presence/Presence3";
 import ContactUs from "@/components/contactmodal/ContactUs";
 import Link from "next/link";
 import BlurText from "@/components/BlurText";
+import EngineerCTA from "./global_coverage/EngineerCTA";
+import HomeCTA from "@/app/home/HomeCTA";
 
 export default function HomeClient() {
   return (
@@ -116,12 +118,13 @@ export default function HomeClient() {
         </section>
       </div>
 
-      <Services />
       <Statistics />
-      <CompaniesMarq />
       <Partnerships />
-      <Industries />
+      <CompaniesMarq />
+      <Services />
       <Presence3 />
+      <HomeCTA/>
+      {/* <Industries /> */}
       <Footer3 />
     </>
   );

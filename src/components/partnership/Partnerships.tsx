@@ -5,13 +5,37 @@ import 'react-multi-carousel/lib/styles.css';
 import ScrollAnimation from 'react-animate-on-scroll'
 
 const PS = [
-  {logo:"assests/partnership/swift.png",title:"Swift resource mobilization",text:"Rapid deployment of skilled teams to address your needs"},
-  {logo:"assests/partnership/adaptable.png",title:"Expert and adaptable workforce",text:"Customized solutions delivered by our versatile experts."},
-  {logo:"assests/partnership/tailored.png",title:"Tailored service solutions",text:"Personalized support aligned with your unique business objectives."},
-  {logo:"assests/partnership/multination.png",title:"Multinational dedicated teams",text:"Global reach with local expertise for seamless operations."},
-  {logo:"assests/partnership/24.png",title:"24/7 emergency support",text:"Uninterrupted service and peace of mind."},
+  {
+    logo: "assests/partnership/swift.png",
+    title: "Swift resource mobilization",
+    text: "Rapid deployment of skilled teams to address your needs",
+  },
+    {
+    logo: "assests/partnership/tailored.png",
+    title: "Tailored service solutions",
+    text: "Personalized support aligned with your unique business objectives.",
+  },
+  {
+    logo: "assests/partnership/adaptable.png",
+    title: "Deep Engineering Expertise",
+    text: "Our engineers are expert problem-solvers, certified to handle complex diagnostics, network troubleshooting.",
+    // text: "We are not a dispatch service. Our engineers are expert problem-solvers, certified to handle complex diagnostics, network troubleshooting, and critical thinking directly on the data center floor.",
+  },
 
-]
+  {
+    logo: "assests/partnership/multination.png",
+    title: "Global Reach, Local Expertise",
+    text: "With certified data center technicians on the ground in 50+ countries and key hubs like Singapore, London, Frankfurt, and Ashburn .",
+    // text: "With certified data center technicians on the ground in 50+ countries and key hubs like Singapore, London, Frankfurt, and Ashburn, we provide a single, unified solution with the local knowledge to navigate any environment.",
+  },
+  {
+    logo: "assests/partnership/24.png",
+    title: "SLA-Backed Reliability",
+    // text: "Our 24/7/365 operations are engineered for mission-critical environments. We deliver on our promises with disciplined, SLA-backed processes, proven by a 98% customer satisfaction rate.",
+    text: "Our 24/7/365 operations are engineered for mission-critical environments.",
+  },
+];
+
 
 const Partnerships:FC = () =>{
 

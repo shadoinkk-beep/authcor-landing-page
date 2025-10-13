@@ -142,7 +142,8 @@ export default function ContactSection() {
       <label className="text-sm mb-1 text-white/80">Phone Number*</label>
       {isClient && (
         <PhoneInput
-          country="in"
+        // usa
+          country="us"
           value={phone}
           onChange={(value) => setPhone(value || "")}
           inputClass="!bg-transparent !text-white !border-0 !w-full"

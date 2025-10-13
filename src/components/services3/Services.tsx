@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FC } from "react";
 
-import { serviceJson } from "./servicesjson";
+import { HomePageServices, serviceJson } from "./servicesjson";
 import ScrollAnimation from 'react-animate-on-scroll'
 
 
@@ -14,9 +14,13 @@ const Services:FC = () =>{
     <div className="flex flex-wrap">
       <div className="p-4 md:w-1/3">
       <h1 className="text-md font-medium text-red-500">Authcor Technologies</h1>
-    <h2 className="mt-2 text-3xl font-bold text-gray-800">A Foundation for Flawless IT Operations</h2>
+    <h2 className="mt-2 text-3xl font-bold text-gray-800">Expert Data Center Services for Flawless IT Operations</h2>
     <p className="mt-4 text-gray-600">
-      AuthCor provides expert solutions for every aspect of your data center. From remote hands & eye support to complex deployments, we've got you covered.
+      Authcor Technologies provides end-to-end IT infrastructure services designed to reduce 
+operational costs, maximize uptime, and scale with your business. From global on-site 
+support to full lifecycle management, we are your trusted partner in data center 
+excellence.
+      {/* AuthCor provides expert solutions for every aspect of your data center. From remote hands & eye support to complex deployments, we've got you covered. */}
     </p>
 
     <Link href={"/services"} className="py-2 mt-4 flex gap-8  hover:before:bg-redborder-red-500 relative h-fit w-fit overflow-hidden border border-black bg-white px-3 rounded-xl text-red-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-white hover:shadow-red-500 hover:before:left-0 hover:before:w-full">
@@ -30,7 +34,7 @@ const Services:FC = () =>{
 
       </div>
 
-        {serviceJson.slice(0,5).map((serv,i)=> <Card img={i} index={i} key={serv.title}  title={serv.title} text={serv.text} />)}
+        {HomePageServices.map((serv,i)=> <Card img={i} index={i} key={serv.title}  title={serv.title} text={serv.text} />)}
 
     </div>
   </div>

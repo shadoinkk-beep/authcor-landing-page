@@ -57,7 +57,8 @@ const AboutClient: FC = () => {
             <div className="md:w-2/4">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">OUR MISSION</h2>
               <p className="text-gray-700 mb-6">
-                To uncomplicate global infrastructure management, empowering our clients...
+                To uncomplicate global infrastructure management, empowering 
+our clients to scale with confidence and focus on their core business.
               </p>
             </div>
             <img src="assests/ourmission.jpeg" alt="Network cables" className="rounded-lg shadow-lg md:w-2/4 max-h-60 object-cover" />
@@ -70,7 +71,8 @@ const AboutClient: FC = () => {
           <div className="md:w-2/4">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">OUR VISION</h2>
             <p className="text-gray-700 mb-6">
-              To be the world's most trusted and respected name in data center operational excellence...
+               To be the world's most trusted and respected name in data center 
+operational excellence.
             </p>
           </div>
         </motion.div>
@@ -115,7 +117,7 @@ const CoreValuesSec: FC = () => (
   <section className="container py-12 pb-0  mx-auto  max-w-7xl px-6">
     <div className="text-black grid text-center">
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: false}} variants={fadeUp}>
-        <h2 className="text-4xl font-bold font-sans">Our Core Values</h2>
+        <h2 className="text-4xl font-bold font-sans">Our Values: The AuthCor DNA </h2>
         <p className="m-6">At Authcor Technologies, our values shape who we are and guide everything we do.</p>
       </motion.div>
     </div>

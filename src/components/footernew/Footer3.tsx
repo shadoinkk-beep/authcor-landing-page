@@ -100,7 +100,7 @@ const Footer3:FC = () =>{
 
             <p>Phone : +65 9396 6854</p>
             <p>Email : info@authcor.com</p>
-            <p>Address : W21 Woodlands Close,</p>
+            <p>Address : 21 Woodlands Close,</p>
             <p>#08-44, Primz Bizhub,</p>
             <p>Singapore 737854</p>
             <div className="flex space-x-4 text-white mt-1">
