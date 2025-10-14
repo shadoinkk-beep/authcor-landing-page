@@ -26,7 +26,7 @@ const Presence3:FC = ()=>{
     <ScrollAnimation animateIn="animate__fadeInUp">
 
       <h2 className="text-4xl font-medium ">We Are Present in</h2>
-      <h1 className="text-4xl font-medium my-4">30+ Countries</h1>
+      <h1 className="text-4xl font-medium my-4">50+ Countries</h1>
       <h2 className="text-4xl font-medium">Across The Globe</h2>
     </ScrollAnimation>
       {/* <h2 className="text-2xl font-semibold">We are Present in <span className="text-4xl">30+ Countries</span> Across the Globe </h2> */}
