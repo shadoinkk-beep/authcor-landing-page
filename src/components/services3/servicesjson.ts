@@ -1,20 +1,126 @@
 export const serviceJson = [
-    {img:"",title:"Remote Hands & Eye Support",subtitle:"Expert remote assistance for your critical IT needs.",text:"Our remote hands & eye support service provides on-site assistance without the need for your physical presence. Our skilled technicians handle your equipment with care, ensuring smooth operations and quick resolutions.",checks:["24/7 on-site technical assistance","Routine maintenance and troubleshooting","Visual inspections and reports","Prompt response to emergency situations"]},
-    {img:"",title:"Warehouse & Logistics Support",subtitle:"Streamlined logistics solutions for your IT infrastructure.",text:"Our warehouse & logistics support service ensures your equipment is safely stored and efficiently managed. We handle the logistics so you can focus on your core business activities.",checks:["Secure storage facilities","Efficient inventory management"," Timely equipment delivery and pickup","Comprehensive logistics planning"]},
-    {img:"",title:"Ticketing System & RMA's",subtitle:"Efficient ticketing and Return Merchandise Authorization management.",text:"Our ticketing System & RMA services streamline issue tracking and equipment returns, ensuring a smooth process for managing technical support and defective hardware.",checks:["User-friendly ticketing system","Swift issue resolution","Seamless RMA processing","Detailed tracking and reporting"]},
-    {img:"",title:"Infrastructure Deployment & Lifecycle",subtitle:"Professional deployment and ongoing maintenance for your IT assets.",text:"End-to-end project management for rack and stack deployments, data center migrations, and structured cabling installations.",checks:["Expert equipment installation","Regular maintenance schedules","Proactive issue detection and resolution","Customized service plans"]},
-    // {img:"",title:"Deployment & Maintenance",subtitle:"Professional deployment and ongoing maintenance for your IT assets.",text:"Our deployment & maintenance service covers the complete lifecycle of your IT infrastructure, from initial setup to continuous upkeep, ensuring optimal performance and longevity.",checks:["Expert equipment installation","Regular maintenance schedules","Proactive issue detection and resolution","Customized service plans"]},
-    {img:"",title:"Managed Data Center Services",subtitle:"Streamline your IT operations with our comprehensive managed services.",text:"Proactive monitoring, patch management, and infrastructure optimization to ensure peak performance and stability.",checks:["24/7 system monitoring and support","Regular maintenance and updates","Proactive issue detection and resolution","Security management and compliance"]},
-    // {img:"",title:"Managed Services Operation",subtitle:"Streamline your IT operations with our comprehensive managed services.",text:"Our managed services operation offers end-to-end management of your IT infrastructure, allowing you to focus on your core business activities. We ensure your systems are always running smoothly and securely with our proactive approach and dedicated support.",checks:["24/7 system monitoring and support","Regular maintenance and updates","Proactive issue detection and resolution","Security management and compliance"]},
-    {img:"",title:"Management and Control Consulting",subtitle:"Optimize your operations with expert management and control consulting.",text:"Our management and control consulting service is designed to enhance your operational efficiency and strategic planning. Our experienced consultants work closely with your team to develop customized solutions that drive performance and growth.",checks:["In-depth operational assessments"," Strategic planning and implementation","Performance monitoring and optimization","Tailored training and support"]},
-    {img:"",title:"S/W Configuration & Updates",subtitle:"Keep your software up-to-date and secure.",text:"Our software configuration & updates service ensures your systems are always running the latest versions, enhancing security and performance.",checks:["Initial software setup and configuration"," Regular software updates and patches"," Compatibility testing","Proactive security management"]},
-    {img:"",title:"Network Migrations",subtitle:"Seamless transitions for your network infrastructure.",text:"Our network migrations service guarantees a smooth and efficient migration process, minimizing downtime and ensuring a stable transition to your new network environment.",checks:["Comprehensive migration planning","Data integrity and security assurance","Minimal operational disruption","Post-migration support"]},
-    {img:"",title:"Structured Cabling & Fabrics",subtitle:"Robust cabling solutions for reliable connectivity.",text:"Robust cabling solutions for reliable connectivity.",checks:["Custom cabling design","Professional installation","High-quality materials","Future-proof solutions"]},
-    {img:"",title:"Turnkey Deployments",subtitle:"Complete deployment solutions from start to finish",text:"Our turnkey deployments service handles every aspect of your IT project, delivering fully operational systems ready for immediate use.",checks:["Comprehensive project management","Quality assurance testing","End-to-end deployment","Ongoing support"]},
-    {img:"",title:"Project-Based Outsourcing",subtitle:"Flexible outsourcing solutions for your IT projects.",text:"Our project-based outsourcing service provides the expertise and resources needed to complete your IT projects efficiently and effectively",checks:["Access to skilled professionals","Customizable engagement models","Cost-effective project execution","Dedicated project management"]},
-    {img:"",title:"Ad-hoc & Urgent/Scheduled Support",subtitle:"Immediate support when you need it most.",text:"Our ad-hoc & emergency support service offers rapid response and resolution to unexpected IT issues, ensuring minimal disruption to your operations",checks:["24/7 emergency support"," Quick issue resolution","On-demand technical assistance","Peace of mind for critical situations"]},
-    // {img:"",title:"",subtitle:"",text:"",checks:["","","",""]},
-]
+  {
+    category: "Smart Hands & On-Site Support",
+    subtitle:
+      "Extend your reach without extending your payroll. Our global network of certified technicians provides immediate, expert support right where you need it, when you need it.",
+    services: [
+      {
+        title: "Remote Hands & Eye Support",
+        subtitle: "Expert remote assistance for your critical IT needs.",
+        text: "Consider us your expert eyes, ears, and hands on the ground, anytime, anywhere. When an issue arises in your data center or remote office, Authcor's Smart Hands service provides immediate, intelligent action. We handle everything from emergency reboots and complex diagnostics to hardware audits, device inventories, and secure vendor escorts, eliminating costly travel for your engineers.",
+        checks: [
+          "24/7 on-site technical assistance",
+          "Rapid issue diagnostics & resolution",
+          "Secure vendor and third-party escorts",
+          "Hardware audits & inventory management",
+        ],
+      },
+      {
+        title: "Warehouse & Logistics Support",
+        subtitle: "Streamlined logistics solutions for your IT infrastructure.",
+        text: "Managing the physical flow of IT hardware is a complex challenge. Authcor’s IT Warehouse & Logistics Support provides a secure extension of your operations. We offer secure storage, hardware staging, asset tagging, and meticulous inventory management, ensuring your hardware is exactly where it needs to be, ready for action.",
+        checks: [
+          "Secure storage facilities",
+          "Hardware staging & configuration",
+          "Asset tagging & inventory management",
+          "Comprehensive reverse logistics (ITAD)",
+        ],
+      },
+      {
+        title: "Break/Fix & IMAC Services",
+        subtitle: "Rapid hardware repair and lifecycle management.",
+        text: "When hardware fails, every second of downtime costs you. Authcor’s Break/Fix and IMAC services provide an end-to-end solution for the hardware lifecycle. We manage it all, from rapid diagnostics and vendor RMA processing to precise component replacements and IMAC (Install, Move, Add, Change) tasks to get you back online, fast.",
+        checks: [
+          "Rapid hardware diagnostics",
+          "End-to-end vendor RMA management",
+          "On-site component replacement",
+          "Precise IMAC execution",
+        ],
+      },
+    ],
+  },
+  {
+    category: "Infrastructure Deployment & Lifecycle Services",
+    subtitle:
+      "From single-server installs to multi-site data center build-outs, our project-based services ensure your infrastructure is deployed flawlessly, on time, and on budget.",
+    services: [
+      {
+        title: "Turnkey Data Center Deployments",
+        subtitle: "Complete deployment solutions from start to finish.",
+        text: "From Pallet to Production. Perfected. Authcor manages the complete deployment lifecycle—from logistics and receiving to professional rack and stack, standards-based cabling, and final power-up. We ensure your new infrastructure is delivered on time, on budget, and to the highest industry standard.",
+        checks: [
+          "Comprehensive project management",
+          "Professional rack and stack installation",
+          "End-to-end deployment execution",
+          "Accelerated time-to-revenue",
+        ],
+      },
+      {
+        title: "Structured Cabling & Fabrics",
+        subtitle: "Robust cabling solutions for reliable connectivity.",
+        text: "Your physical cabling is the blueprint for network performance. Our certified technicians design and install clean, organized, and high-performance copper and fiber optic cabling infrastructure. Every cable is tested, labeled, and documented to maximize data flow and simplify future growth.",
+        checks: [
+          "Custom cabling design",
+          "Professional copper & fiber installation",
+          "Performance testing & certification",
+          "Future-proof physical layer",
+        ],
+      },
+      {
+        title: "Data Center Migrations",
+        subtitle: "Seamless infrastructure transitions with zero disruption.",
+        text: "Change is inevitable, but business disruption is not. Whether you are consolidating data centers or executing a large-scale hardware modernization project, we provide meticulous planning and flawless execution to safeguard your business continuity at every step.",
+        checks: [
+          "Comprehensive migration planning",
+          "Data integrity & security assurance",
+          "Minimal operational disruption",
+          "Post-migration support",
+        ],
+      },
+    ],
+  },
+  {
+    category: "Managed & Strategic Services",
+    subtitle:
+      "Move beyond firefighting. We provide the proactive management and strategic insight needed to optimize your infrastructure for cost, performance, and long-term business alignment.",
+    services: [
+      {
+        title: "Proactive Infrastructure Management",
+        subtitle: "Streamline your IT operations with comprehensive managed services.",
+        text: "Shift your IT operations from a reactive, break/fix model to one of proactive control. Authcor offloads daily operational burdens with continuous monitoring, scheduled patch management, and performance tuning to identify and resolve issues before they impact your services.",
+        checks: [
+          "24/7 systems monitoring and support",
+          "Regular maintenance and updates",
+          "Proactive issue detection & resolution",
+          "Security management and compliance",
+        ],
+      },
+      {
+        title: "Technical Governance & Reporting",
+        subtitle: "Aligning IT operations with your business objectives.",
+        text: "This service provides a senior, dedicated Technical Account Manager (TAM) who acts as your strategic advocate. Your TAM provides governance for all services, leads regular performance reviews (QBRs), offers guidance on technology roadmaps, and ensures every Authcor activity aligns perfectly with your goals.",
+        checks: [
+          "Dedicated Technical Account Manager (TAM)",
+          "Strategic planning & QBRs",
+          "Performance monitoring & optimization",
+          "Continuous service improvement",
+        ],
+      },
+      {
+        title: "Data Center Strategy & Consulting",
+        subtitle: "Optimize your operations with expert management and control consulting.",
+        text: "Is your data center footprint maximizing your ROI? Our senior consultants provide expert analysis and actionable recommendations on facility design, capacity planning, and operational efficiency to optimize your CAPEX and OPEX and align your infrastructure with business goals.",
+        checks: [
+          "In-depth operational assessments",
+          "Strategic planning and implementation",
+          "CAPEX/OPEX optimization analysis",
+          "Data-driven decision support",
+        ],
+      },
+    ],
+  },
+];
+
 
 
 export const HomePageServices = [
