@@ -55,7 +55,7 @@ interface CardProps {
   checks: string[];
 }
 
-const ServiceCardEx: FC<CardProps> = ({
+export const ServiceCardEx: FC<CardProps> = ({
   img,
   title,
   text,

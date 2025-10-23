@@ -100,7 +100,7 @@ operational excellence.
       </motion.div>
 
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: false}} variants={fadeUp} className="container px-5 py-12 md:mx-auto max-w-7xl justify-items-center flex flex-wrap my-4 text-black">
-        {serviceJson.slice(0, 3).map((serv, i) => (
+        {serviceJson[0].services.map((serv, i) => (
           <ServiceCardEx img={i} key={serv.title} subtitle={serv.subtitle} checks={serv.checks} title={serv.title} text={serv.text} />
         ))}
       </motion.div>
