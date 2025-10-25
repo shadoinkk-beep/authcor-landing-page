@@ -4,12 +4,12 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
 
-import AboutHero from "@/components/about/AboutHero";
 import { ServiceCardEx } from "@/components/services/Serviceslg";
-import { serviceJson } from "@/components/services3/servicesjson";
+import { HomePageServices, serviceJson } from "@/components/services3/servicesjson";
 import { StatisticsTable } from "@/components/statistics/Statistics";
 import Footer3 from "@/components/footernew/Footer3";
 import Link from "next/link";
+import AboutHero from "./aboutnew";
 
 // Core Values Array
 const coreValues = [
@@ -19,7 +19,7 @@ const coreValues = [
   },
   {
     title: "Reliability is Our Promise",
-    text: "We operate with unwavering discipline, 24/7/365. Our clients trust us because we deliver on our commitments, every time. It's in our DNA."
+    text: "We operate with unwavering discipline, 24/7/365. Our clients trust us because we deliver on our commitments, every time."
   },
   {
     title: "Partnership is Our Method",
@@ -48,7 +48,22 @@ const AboutClient: FC = () => {
     <>
       <AboutHero />
 
-      <CoreValuesSec />
+
+
+
+      {/* Engineered Section */}
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: false}} variants={fadeUp} className="text-black container px-5 py-12 md:mx-auto max-w-7xl text-center">
+        <h2 className="text-4xl font-bold font-sans">Engineered for the New Era of Global IT</h2>
+        <p className="m-6">
+          <b>
+Headquartered in the global tech hub of Singapore
+          </b>
+           and founded by industry veterans in 2021, AuthCor was born from a frustration with the status quo. Global data center support was too often a fractured experience—slow, inconsistent, and lacking true engineering depth. We knew a better model was possible. By uniting elite engineering talent with a culture of radical reliability, we built a new standard. Our obsessive focus on client outcomes has fueled our expansion to over 50 countries, making us the trusted operational backbone for companies that cannot afford to fail.
+        </p>
+      </motion.div>
+
+      <StatisticsTable />
+
 
       <div className="container py-12 mx-auto  max-w-7xl px-6">
         {/* Mission Section */}
@@ -57,8 +72,7 @@ const AboutClient: FC = () => {
             <div className="md:w-2/4">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">OUR MISSION</h2>
               <p className="text-gray-700 mb-6">
-                To uncomplicate global infrastructure management, empowering 
-our clients to scale with confidence and focus on their core business.
+                To simplify global infrastructure management. We deliver seamless, expert-driven services that remove operational complexity, empowering our clients to scale with confidence and dedicate their full attention to core business innovation.
               </p>
             </div>
             <img src="assests/ourmission.jpeg" alt="Network cables" className="rounded-lg shadow-lg md:w-2/4 max-h-60 object-cover" />
@@ -71,22 +85,15 @@ our clients to scale with confidence and focus on their core business.
           <div className="md:w-2/4">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">OUR VISION</h2>
             <p className="text-gray-700 mb-6">
-               To be the world's most trusted and respected name in data center 
-operational excellence.
+               To be the definitive global benchmark for data center operational excellence. We aim to be the world's most trusted and respected partner, chosen not just for what we do, but for the unwavering integrity, expertise, and results we deliver.
             </p>
           </div>
         </motion.div>
       </div>
 
-      {/* Engineered Section */}
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: false}} variants={fadeUp} className="text-black container px-5 py-12 md:mx-auto max-w-7xl text-center">
-        <h2 className="text-4xl font-bold font-sans">Engineered for the New Era of Global IT</h2>
-        <p className="m-6">
-          Headquartered in Singapore, AuthCor was born from a frustration with the status quo...
-        </p>
-      </motion.div>
 
-      <StatisticsTable />
+      <CoreValuesSec />
+
 
       {/* Services Section */}
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: false}} variants={fadeUp} className="text-black container mt-12 grid justify-items-center mx-auto  max-w-7xl px-6">
@@ -100,7 +107,7 @@ operational excellence.
       </motion.div>
 
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: false}} variants={fadeUp} className="container px-5 py-12 md:mx-auto max-w-7xl justify-items-center flex flex-wrap my-4 text-black">
-        {serviceJson[0].services.map((serv, i) => (
+        {HomePageServices.slice(0, 3).map((serv, i) => (
           <ServiceCardEx img={i} key={serv.title} subtitle={serv.subtitle} checks={serv.checks} title={serv.title} text={serv.text} />
         ))}
       </motion.div>
@@ -118,7 +125,7 @@ const CoreValuesSec: FC = () => (
     <div className="text-black grid text-center">
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: false}} variants={fadeUp}>
         <h2 className="text-4xl font-bold font-sans">Our Values: The AuthCor DNA </h2>
-        <p className="m-6">At Authcor Technologies, our values shape who we are and guide everything we do.</p>
+        <p className="m-6">At Authcor, our values shape who we are and guide everything we do.</p>
       </motion.div>
     </div>
     <motion.div initial="hidden" whileInView="visible" viewport={{ once: false}} variants={fadeUp}>
