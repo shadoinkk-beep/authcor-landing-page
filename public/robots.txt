@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.authcor.com
+
+# Sitemaps
+Sitemap: https://www.authcor.com/sitemap.xml
