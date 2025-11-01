@@ -13,7 +13,7 @@ const Services:FC = () =>{
   <div className="container py-24 mx-auto  max-w-7xl px-6">
     <div className="flex flex-wrap">
       <div className="p-4 md:w-1/3">
-      <h1 className="text-md font-medium text-red-500">Authcor Technologies</h1>
+      <h2 className="text-md font-medium text-red-500">Authcor Technologies</h2>
     <h2 className="mt-2 text-3xl font-bold text-gray-800">Expert Data Center Services for Flawless IT Operations</h2>
     <p className="mt-4 text-gray-600">
       Authcor Technologies provides end-to-end IT infrastructure services designed to reduce 

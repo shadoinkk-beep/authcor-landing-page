@@ -34,7 +34,7 @@ export default function HomeClient() {
 
         <section className="content">
           <div className="flex flex-col items-center px-4 py-12 text-center">
-            <h2 className="text-3xl md:text:4xl font-bold tracking-tight text-white-800 xl:text-6xl dark:text-white">
+            <h1 className="text-3xl md:text:4xl font-bold tracking-tight text-white-800 xl:text-6xl dark:text-white">
               <BlurText
                 text="Your Global Data Center Operations, Solved."
                 delay={150}
@@ -42,7 +42,7 @@ export default function HomeClient() {
                 direction="top"
                 className="text-2xl md:text:4xl font-bold tracking-tight text-white-800 xl:text-6xl dark:text-white flex justify-center"
               />
-            </h2>
+            </h1>
 
             <BlurText
               text="We are your single, strategic partner for 24/7 Smart Hands, flawless IT deployments, and proactive managed services—delivering unwavering control and consistency across your entire data center footprint."

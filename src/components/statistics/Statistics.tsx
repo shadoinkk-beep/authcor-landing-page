@@ -14,11 +14,11 @@ const Statistics:FC = () =>{
           
           <div className="container  py-6  ">
           <ScrollAnimation animateIn="animate__fadeInUp">
-    <h1 className="text-4xl px-4 font-medium text-gray-700 text-center">
+    <h2 className="text-4xl px-4 font-medium text-gray-700 text-center">
     Stop Reacting to Infrastructure Demands.
     <br />
      Start Driving Business Strategy.
-    </h1>
+    </h2>
     <p  className="text-center px-4 mt-6 text-lg font-light text-black">
       Managing a distributed infrastructure consumes your most valuable asset: your team’s focus. AuthCor operates as a seamless extension of your organization, embedding certified data center engineers into your workflow. We master the physical layer—from emergency break/fix to full-scale rack and stack deployments—liberating your team to execute the strategic projects that matter.
     </p>

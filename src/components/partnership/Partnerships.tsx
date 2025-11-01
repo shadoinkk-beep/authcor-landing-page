@@ -44,9 +44,9 @@ const Partnerships:FC = () =>{
   <ScrollAnimation animateIn="animate__fadeInUp">
       <div className="container   py-12 relative px-6">
 
-          <h1 className="text-4xl font-medium text-gray-700 text-center">
+          <h2 className="text-4xl font-medium text-gray-700 text-center">
           Global Scale, Uncompromising Standards.
-          </h1>
+          </h2>
           <p className="text-center  mt-6 mb-4 text-lg font-light text-black">
           By partnering with Authcor, you gain access to unparalleled expertise in data center services. Our versatile and experienced workforce provides personalized solutions tailored to your unique business needs. With our global reach and 24/7 emergency support, we ensure that your operations run smoothly and efficiently. Empower your business with Authcor Technology and achieve unparalleled success in your industry.
           </p>
