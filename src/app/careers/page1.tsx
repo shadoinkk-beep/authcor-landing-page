@@ -1,7 +1,4 @@
 "use client";
-import Apply from "@/components/contactmodal/Apply";
-import Connect from "@/components/contactmodal/Connect";
-import ContactUs from "@/components/contactmodal/ContactUs";
 import Footer3 from "@/components/footernew/Footer3";
 import Modal from "@/components/modal/Modal";
 import Image from "next/image";
